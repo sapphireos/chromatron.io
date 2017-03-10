@@ -1,0 +1,75 @@
+$c-green: #49FFA6;
+$c-black: #222;
+$c-white: #fff;
+$c-font-stack: "rift-soft", helvetica, arial, sans-serif;
+
+
+$icon-font-path: '../fonts/';
+$primary-bg: #49FFA6;
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  background-color: $primary-bg;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: $c-font-stack;
+  font-weight: 800;
+
+  font-style: italic;
+  margin-bottom: 1em;
+
+  letter-spacing: 3px;
+
+}
+h1 {
+  font-size: 72px;
+}
+h2 {
+  font-size: 48px;
+}
+
+
+h2 { color: $c-white; }
+.coming-soon { color: $c-black; }
+
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
