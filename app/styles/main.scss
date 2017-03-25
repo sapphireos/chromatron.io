@@ -18,19 +18,12 @@ $primary-bg: #49FFA6;
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-  background-color: $primary-bg;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
 
 h1, h2, h3, h4 {
   font-family: $c-font-stack;
   font-weight: 800;
 
   font-style: italic;
-  margin-bottom: 1em;
 
   letter-spacing: 3px;
 
@@ -43,8 +36,30 @@ h2 {
 }
 
 
-h2 { color: $c-white; }
-.coming-soon { color: $c-black; }
+section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+section.hero {
+  background-color: $primary-bg;
+
+  .coming-soon {
+    color: $c-black;
+  }
+  h1, h2, h3, h4 { margin-bottom: 1em; }
+  h2 { color: $c-white; }
+}
+
+
+section.intro {
+
+}
+
+section:nth-child(2n) {
+  background-color: #eee;
+}
 
 
 /* Customize container */
