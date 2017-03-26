@@ -11,6 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/prism/themes/prism.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -71,7 +72,7 @@
 
         <p>Chromatron is packed with features that make LED projects awesome:</p>
 
-        <ul>
+        <ul class="list-unstyled">
           <li><h3>Supports a variety of LED pixel types without additional circuitry or firmware modifications.</h3><br />
             Currently, Chromatron supports the APA102, WS2811, WS2812, WS2801, and analog PWM pixel strips.  All pixel mode settings are adjustable in real time, without recompiling firmware or rebooting.</li>
 
@@ -80,11 +81,11 @@
           Ok, initial setup of the Wifi itself has to be done over USB, but once you do that, it's Wifi the rest of the way!</li>
 
 
-          <li><h3>Drive up to 300 pixels per controller</h3><br />
+          <li><h3>Drive up to 300 pixels per controller.</h3><br />
           You can do quite a lot with 300 pixels.  But if you need more, you aren't limited to just one Chromatron!</li>
 
 
-          <li><h3>Built in scripting engine</h3><br />
+          <li><h3>Built in scripting engine.</h3><br />
           Chromatron's FX Script is a simple language designed specifically for pixel graphics.  It runs on a customed designed virtual machine directly on Chromatron hardware.  Compiled FX scripts are quite small, which enables near instant code reloading.  You can even run the compiler in live mode, which reloads your script to target devices every time you hit save on your code editor.  The virtual machine and language are pixel-aware, which helps you write less code and helps the processor run as quickly as possible.</li>
 
 
@@ -141,44 +142,111 @@
 
         <h1>API Examples</h1>
 
-        <p>code code code</p>
+
+        <p class="lead">Discover, configure, and control devices over Wifi with our Python and Command Line Interface:</p>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <h3>Python</h3>
+            <pre>
+              <code class="language-python">
+from chromatron import *
+
+# Discover devices in living room
+group = DeviceGroup('living_room')
+
+# Load rainbow effect script
+group.load_vm('rainbow.fx')
+
+# Set master dimmer to 50%
+group.master_dimmer = 0.5
+              </code>
+            </pre>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h3>Command Line</h3>
+
+            <pre>
+              <code class="language-bash">
+# Install Python library
+pip install chromatron
+
+# Discover devices in living room
+chromatron --query living_room discover
+
+# Load rainbow effect script to previous group
+chromatron vm load rainbow.fx
+
+# Set master dimmer to 50%
+chromatron keys set gfx_master_dimmer 0.5
+              </code>
+            </pre>
+          </div>
+        </div>
+
+
+        <h3>Scripting Engine</h3>
+        <p>Generate graphics directly on hardware.  Compiles and loads quickly - get instant visual feedback.</p>
+
+        <pre>
+          <code class="language-python">
+current_hue = Number()
+
+def init():
+    pixels.sat = 1.0
+    pixels.val = 1.0
+
+def loop():
+    current_hue += 0.05
+
+    a = Number()
+    a = current_hue
+
+    for i in pix_count():
+        pixels[i].hue = a
+
+        a += 1.0 / pix_count()
+        </pre>
+
+        <p>This script generates this effect:</p>
+
+        <!-- TODO: (link to youtube video) -->
+
+        </code>
       </div>
     </section>
 
 
 
-    <section class="goal">
+    <section class="technical-details">
       <div class="container">
 
         <h1>Technical details</h1>
 
-        <pre>
-        Main IO processor:
-        Atmel AVR XMega128A4U
-        32 MHz
-        8K SRAM
-        128K Flash
+        <h3>Main IO processor:</h3>
+        <li>Atmel AVR XMega128A4U</li>
+        <li>32 MHz</li>
+        <li>8K SRAM</li>
+        <li>128K Flash</li>
 
-        This processor runs the real time OS, handles raw pixel data output, USB, auxiliary IO, and the user file system.
-
-
-        Wifi/Graphics processor:
-        Espressif ESP8266
-        160 MHz
-        64K RAM
-
-        Handles wifi communications, scripting engine VM, pixel faders, and HSV to RGB colorspace conversion.  Connected to the real time processor via 4 MHz UART bridge.
+        <p>This processor runs the real time OS, handles raw pixel data output, USB, auxiliary IO, and the user file system.</p>
 
 
-        IO:
+        <h3>Wifi/Graphics processor:</h3>
+        <li>Espressif ESP8266</li>
+        <li>160 MHz</li>
+        <li>64K RAM</li>
 
-        4x PWM outputs, 3 amps each
-        1x Pixel clock + data output with built in level shifters, multiplexed with 2 of the PWM channels
-        2x power and ground connections
-        Micro USB port
-        2x expansion IO headers for future use
+        <p>Handles wifi communications, scripting engine VM, pixel faders, and HSV to RGB colorspace conversion.  Connected to the real time processor via 4 MHz UART bridge.</p>
 
-      </pre>
+
+        <h3>IO:</h3>
+        <li>4x PWM outputs, 3 amps each</li>
+        <li>1x Pixel clock + data output with built in level shifters, multiplexed with 2 of the PWM channels</li>
+        <li>2x power and ground connections</li>
+        <li>Micro USB port</li>
+        <li>2x expansion IO headers for future use</li>
+
       </div>
     </section>
 
@@ -194,6 +262,43 @@
 
 
 
+    <section class="open-source">
+      <div class="container">
+
+        <h1>Open Source</h1>
+
+        <p>All software and hardware will be released under OSI compatible licenses once the project hits the funding goal.</p>
+
+        <!-- TODO: logo OSI -->
+        <!-- TODO: logo OSHW -->
+
+      </div>
+    </section>
+
+
+
+    <footer>
+      <div class="container">
+        <p>Copyright &copy; <span class="copyright-year">2017</span> Sapphire Open Systems</p>
+        <ul class="list-unstyled">
+          <li><a href="https://www.facebook.com/sapphirechromatron/" rel="me">Facebook</a></li>
+          <li><a href="https://twitter.com/sapphireos" rel="me">Twitter</a></li>
+          <li><a href="https://www.youtube.com/user/SapphireOpenSystems" rel="me">YouTube</a></li>
+        </ul>
+      </div>
+
+      <script>
+      // replace copyright year with current yr
+      var d = new Date(),
+        y = d.getFullYear();
+      document.querySelectorAll('.copyright-year').forEach(function (span) {
+        span.innerHTML = y;
+      });
+      </script>
+    </footer>
+
+
+
     <section class="goal">
       <div class="container">
 
@@ -201,47 +306,41 @@
 
         <p>Electronics manufacturing is hard.  I would know - I've been doing it for over 10 years.  Issues always come up during manufacturing, but there's a lot that can be done to help mitigate them.</p>
 
-        <li>
-          <h3>Lead times for production quantities of parts can be quite long.  </h3>
-          <p>6 to 8 weeks can be typical.  However, it is imprudent to order production quantities until your hardware design is finished, otherwise you may be stuck with 1000s of the wrong part.  We have an advantage here, in that Chromatron's hardware design is already finished, so we can confidently begin ordering high risk parts (such as processors and connectors) as soon as funds are available.</p>
-        </li>
+        <ul class="list-unstyled">
+          <li>
+            <h3>Production lead times</h3>
+            <p>Lead times for production quantities of parts can be quite long. 6 to 8 weeks can be typical.  However, it is imprudent to order production quantities until your hardware design is finished, otherwise you may be stuck with 1000s of the wrong part.  We have an advantage here, in that Chromatron's hardware design is already finished, so we can confidently begin ordering high risk parts (such as processors and connectors) as soon as funds are available.</p>
+          </li>
 
-        <li>
-          <h3>Manufacturing errors can and do happen</h3>
-          <p>Wrong parts, missing parts, misaligned parts, boards overheated - these are all things that can happen, and are all things I've dealt with in my professional work.  Chromatron is being built locally in Austin, TX at a vendor I have past experience with (with excellent results).  I can be on site in  20 minutes if issues crop up (there's no substitute for being able to troubleshoot in person).  Additionally, I will be doing a lower volume pilot run (100-250 units) to ensure any issues are worked out before committing resources to the full build.</p>
-        </li>
+          <li>
+            <h3>Manufacturing errors can and do happen</h3>
+            <p>Wrong parts, missing parts, misaligned parts, boards overheated - these are all things that can happen, and are all things I've dealt with in my professional work.  Chromatron is being built locally in Austin, TX at a vendor I have past experience with (with excellent results).  I can be on site in  20 minutes if issues crop up (there's no substitute for being able to troubleshoot in person).  Additionally, I will be doing a lower volume pilot run (100-250 units) to ensure any issues are worked out before committing resources to the full build.</p>
+          </li>
 
-        <li>
-          <h3>Software bugs</h3>
-          <p>I take software issues very seriously and design my code to be as robust as possible.  While much of Chromatron's software is pretty mature at this point, no sane engineer would call their work bug free and I am no exception.  The open source nature of the project means you have the opportunity to review and comment on my work, as well as file bug reports (and feature requests!).  I use Chromatron 24/7 to run the lighting in my home, so I am personally invested in the quality of the software that runs it.</p>
-        </li>
+          <li>
+            <h3>Software bugs</h3>
+            <p>I take software issues very seriously and design my code to be as robust as possible.  While much of Chromatron's software is pretty mature at this point, no sane engineer would call their work bug free and I am no exception.  The open source nature of the project means you have the opportunity to review and comment on my work, as well as file bug reports (and feature requests!).  I use Chromatron 24/7 to run the lighting in my home, so I am personally invested in the quality of the software that runs it.</p>
+          </li>
 
-        <li>
-          <h3>Communication</h3>
-          <p>Almost everyone on Kickstarter has heard of projects plagued by communications issues.  Chromatron is not going to be one of them.  I will communicate any and all issues that come up and what I'm doing to handle them, along with general progress of the various parts of the project.  It is my hope that Chromatron can become a sustainable business in the future, and I believe the only way that can happen is to earn the trust of my community of backers.</p>
-        </li>
+          <li>
+            <h3>Communication</h3>
+            <p>Almost everyone on Kickstarter has heard of projects plagued by communications issues.  Chromatron is not going to be one of them.  I will communicate any and all issues that come up and what I'm doing to handle them, along with general progress of the various parts of the project.  It is my hope that Chromatron can become a sustainable business in the future, and I believe the only way that can happen is to earn the trust of my community of backers.</p>
+          </li>
+        </ul>
 
       </div>
     </section>
 
 
 
-
-
-
-
-
-
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- Google Analytics -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
       e.src='https://www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      ga('create','UA-29351826-4');ga('send','pageview');
     </script>
 
     <!-- build:js scripts/vendor.js -->
@@ -249,6 +348,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="/bower_components/webfontloader/webfontloader.js"></script>
+    <script src="/bower_components/prism/prism.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
