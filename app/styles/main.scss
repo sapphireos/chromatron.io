@@ -35,8 +35,8 @@ h4, .h4 {
 
 section,
 footer {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 
@@ -56,18 +56,11 @@ section.hero {
   h2, .h2,
   h3, .h3,
   h4, .h4 { margin-bottom: 1em; }
+
+  @media (min-width: $screen-md-min) {
+    .mc-field-group input { width: 320px; }
+  }
 }
-
-
-section.intro {
-
-}
-
-footer {
-  padding: 30px 0;
-}
-
-
 
 
 /* Customize container */
@@ -79,8 +72,6 @@ footer {
 .container-narrow > hr {
   margin: 30px 0;
 }
-
-
 
 
 /* Responsive: Portrait tablets and up */
