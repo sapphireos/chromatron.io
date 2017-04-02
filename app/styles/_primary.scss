@@ -1,0 +1,11 @@
+.primary {
+  background-color: $brand-primary;
+
+
+  a {
+    color: $gray-darker;
+    &:hover {
+      color: $brand-secondary;
+    }
+  }
+}
