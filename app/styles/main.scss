@@ -1,50 +1,66 @@
-$c-green: #49FFA6;
-$c-black: #222;
-$c-white: #fff;
-$c-font-stack: "rift-soft", helvetica, arial, sans-serif;
 
-
-$icon-font-path: '../fonts/';
-$primary-bg: #49FFA6;
+@import 'variables';
+$fa-font-path: '../bower_components/font-awesome/fonts';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
+
+@import 'forms';
+@import 'type';
+@import 'buttons';
+@import 'primary';
+@import 'inverse';
 
 .browserupgrade {
   margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
+  background: $gray-darker;
+  color: $gray-base;
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-  background-color: $primary-bg;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
 
-h1, h2, h3, h4 {
-  font-family: $c-font-stack;
-  font-weight: 800;
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  // font-weight: 800;
 
-  font-style: italic;
-  margin-bottom: 1em;
+  // font-style: italic;
 
   letter-spacing: 3px;
 
 }
-h1 {
-  font-size: 72px;
-}
-h2 {
-  font-size: 48px;
+
+section,
+footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 
-h2 { color: $c-white; }
-.coming-soon { color: $c-black; }
+header {
+  background-color: $brand-primary;
+  height: 6px;
+}
+
+section.hero {
+  background-image: url('../images/jeremy-coffee-prototyping.jpg');
+  background-position: center center;
+  background-size: cover;
+
+  padding: 100px 0;
+
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4 { margin-bottom: 1em; }
+
+  @media (min-width: $screen-md-min) {
+    .mc-field-group input { width: 320px; }
+  }
+}
 
 
 /* Customize container */
@@ -56,8 +72,6 @@ h2 { color: $c-white; }
 .container-narrow > hr {
   margin: 30px 0;
 }
-
-
 
 
 /* Responsive: Portrait tablets and up */
