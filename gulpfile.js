@@ -5,6 +5,8 @@ const browserSync = require('browser-sync').create();
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
+const fs = require('fs');
+const requireDir = require('require-dir')('./gulp-tasks');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
