@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="266px" height="166px" viewBox="0 0 266 166" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>hw-dimens-top</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-386.000000, -4677.000000)">
+            <g id="hw-dimens-top" transform="translate(386.000000, 4674.000000)">
+                <rect id="Rectangle-5-Copy" stroke="#C4C4C4" x="0.5" y="50.5" width="188" height="117.363281"></rect>
+                <rect id="Rectangle-8-Copy" stroke="#C4C4C4" x="9.5" y="60.5" width="169.664179" height="97.8681526"></rect>
+                <text id="2-in-(50.8mm)" font-family="RiftSoft-Demi, Rift Soft" font-size="14" font-weight="500" letter-spacing="2.33333325">
+                    <tspan x="51.3754076" y="14" fill="#222222">2 in </tspan>
+                    <tspan x="82.6140739" y="14" letter-spacing="1.81481481" fill="#B8B8B8">(50.8mm)</tspan>
+                </text>
+                <text id="1.25in-(31.75mm)" font-family="RiftSoft-Demi, Rift Soft" font-size="14" font-weight="500" letter-spacing="2.33333325">
+                    <tspan x="202" y="106" fill="#222222">1.25in </tspan>
+                    <tspan x="202" y="123" fill="#B8B8B8">(31.75mm)</tspan>
+                </text>
+                <polyline id="Line" stroke="#C4C4C4" stroke-linecap="square" points="2 29.7474131 2 22 191 22 191 30.0242355"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

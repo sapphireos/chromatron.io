@@ -34,6 +34,8 @@
     <![endif]-->
     <header>
     </header>
+
+
     <section class="hero inverse">
       <div class="container">
         <img height="80" width="54" src="images/logo-white.svg" alt="Chromatron">
@@ -60,17 +62,21 @@
         <!--End mc_embed_signup-->
       </div>
     </section>
+
+
     <section class="intro hidden">
       <div class="container">
-        <h1>LED Project Enabler</h1>
+        <h1 class="h2">LED Project Enabler</h1>
         <p>Chromatron is an open source pixel controller designed to make LED pixel projects easy and fun.</p>
         <p>The goal of this project is to minimize the technical challenges to producing high quality LED projects and artwork.  Chromatron does a lot of work for you so you can spend more time perfecting your project, and less time chasing bugs.  Everything is designed to be easy to setup and use, but still be powerful enough to create sophisticated projects.</p>
         <p>Ultimately, Chromatron seeks to inspire and enable you to create something that you weren't sure you could do otherwise.</p>
       </div>
     </section>
+
+
     <section class="why-use hidden">
       <div class="container">
-        <h1>Why use Chromatron?</h1>
+        <h1 class="h2">Why use Chromatron?</h1>
         <p>Chromatron is packed with features that make LED projects awesome:</p>
         <ul class="list-unstyled">
           <li><h3>Supports a variety of LED pixel types without additional circuitry or firmware modifications.</h3>
@@ -100,21 +106,27 @@
         </ul>
       </div>
     </section>
+
+
     <section class="goal hidden">
       <div class="container">
-        <h1>Goal</h1>
+        <h1 class="h2">Goal</h1>
         <p>This Kickstarter is to raise money to build the first production run of Chromatron hardware.  The majority of the timeline will be used for coordinating hardware production, building hardware test systems, creating documentation and tutorial content, and of course bug fixes for any issues that crop up.</p>
         <p>The project itself has been under heavy development since August 2016, and most major technical aspects are very usable.  The hardware itself has undergone five revisions, and over a dozen hand built examples are running 24/7.</p>
       </div>
     </section>
-    <section class="video hidden">
+
+
+    <section class="video hidden inverse">
       <div class="">
         <iframe width="900" height="520" style="border: 0; width: 100%;" src="https://www.youtube-nocookie.com/embed/MEYIgJf872A?rel=0&amp;showinfo=0" allowfullscreen></iframe>
       </div>
     </section>
+
+
     <section class="goal hidden">
       <div class="container">
-        <h1>API Examples</h1>
+        <h1 class="h2">API Examples</h1>
         <p class="lead">Discover, configure, and control devices over Wi-Fi with our Python and Command Line Interface:</p>
         <div class="row">
           <div class="col-xs-12 col-sm-6">
@@ -179,48 +191,124 @@ def loop():
         <!-- TODO: (link to youtube video) -->
       </div>
     </section>
-    <section class="technical-details hidden">
+
+
+    <section class="hardware tertiary">
       <div class="container">
-        <h1>Technical details</h1>
-        <h3>Main IO processor:</h3>
-        <ul>
-          <li>Atmel AVR XMega128A4U</li>
-          <li>32 MHz</li>
-          <li>8K SRAM</li>
-          <li>128K Flash</li>
-        </ul>
-        <p>This processor runs the real time OS, handles raw pixel data output, USB, auxiliary IO, and the user file system.</p>
-        <h3>Wi-Fi/Graphics processor:</h3>
-        <ul>
-          <li>Espressif ESP8266</li>
-          <li>160 MHz</li>
-          <li>64K RAM</li>
-        </ul>
-        <p>Handles Wi-Fi communications, scripting engine VM, pixel faders, and HSV to RGB colorspace conversion.  Connected to the real time processor via 4 MHz UART bridge.</p>
-        <h3>IO:</h3>
-        <ul>
-          <li>4x PWM outputs, 3 amps each</li>
-          <li>1x Pixel clock + data output with built in level shifters, multiplexed with 2 of the PWM channels</li>
-          <li>2x power and ground connections</li>
-          <li>Micro USB port</li>
-          <li>2x expansion IO headers for future use</li>
-        </ul>
+        <h1 class="h2">Hardware</h1>
+        <p class="text-center">
+          <img src="images/hw-diagram-vert.svg" alt="Chromatron hardware prototype." class="img-responsive visible-xs">
+          <img src="images/hw-diagram-horiz.svg" alt="Chromatron hardware prototype." class="img-responsive hidden-xs">
+        </p>
       </div>
     </section>
-    <section class="about-us">
+
+
+    <section class="technical-details">
       <div class="container">
-        <h1>About Us</h1>
+        <h1 class="h2">Technical Specs</h1>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-3">
+            <h3>I/O Processor</h3>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-7">
+            <ul class="list-unstyled">
+              <li>Atmel AVR XMega128A4U</li>
+              <li>32 MHz</li>
+              <li>8K SRAM</li>
+              <li>128K Flash</li>
+            </ul>
+            <p>This processor runs the real time OS, handles raw pixel data output, USB, auxiliary IO, and the user file system.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-3">
+            <h3>Wi-Fi/Graphics processor</h3>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-7">
+            <ul class="list-unstyled">
+              <li>Espressif ESP8266</li>
+              <li>160 MHz</li>
+              <li>64K RAM</li>
+            </ul>
+            <p>Handles Wi-Fi communications, scripting engine VM, pixel faders, and HSV to RGB colorspace conversion.  Connected to the real time processor via 4 MHz UART bridge.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-3">
+            <h3>I/O</h3>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-7">
+            <ul class="list-unstyled">
+              <li>4x PWM outputs, 3 amps each</li>
+              <li>1x Pixel clock + data output with built in level shifters, multiplexed with 2 of the PWM channels</li>
+              <li>2x power and ground connections</li>
+              <li>Micro USB port</li>
+              <li>2x expansion IO headers for future use</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-3">
+            <h3>Dimensions</h3>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-7">
+            <ul class="list-unstyled">
+              <li>1.25 x 2 inches (the USB overhangs by another 0.1 inches or so)</li>
+            </ul>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <img src="images/hw-dimens-top.svg" alt="side dimensions">
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <img src="images/hw-dimens-side.svg" alt="side dimensions">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="about-us tertiary">
+      <div class="container">
+        <h1 class="h2">About Us</h1>
         <p class="lead">Sapphire Open Systems is an Austin, TX based startup whose mission is to enable hobbyists, makers, and professionals to connect anything to everything and promote open source and interoperability as a better way to make electronics.</p>
       </div>
     </section>
-    <section class="open-source hidden">
+
+
+    <section class="open-source secondary">
       <div class="container">
-        <h1>100% Open Source</h1>
-        <p class="lead">All software and hardware will be released under OSI compatible licenses once the project hits the funding goal.</p>
-        <img height="180" width="172" src="images/osi-logo-outline.svg" alt="Open Source Initiative logo">
-        <img height="180" width="172" src="images/oshw-logo-outline.svg" alt="Open Source Hardware logo">
+        <div class="row">
+          <div class="col-xs-12 col-sm-8">
+            <h1 class="h2">100% Open Source</h1>
+            <p class="lead">All software and hardware will be released under OSI compatible licenses once the project hits the funding goal.</p>
+          </div>
+          <div class="col-xs-6 col-sm-2 text-center">
+            <img height="180" width="172" class="img-responsive" src="images/osi-logo-outline.svg" alt="Open Source Initiative logo">
+            <h4>Open Source<br> Initiative</h4>
+          </div>
+          <div class="col-xs-6 col-sm-2 text-center">
+            <img height="180" width="172" class="img-responsive" src="images/oshw-logo-outline.svg" alt="Open Source Hardware logo">
+            <h4>Open Source<br> Hardware</h4>
+          </div>
+        </div>
       </div>
     </section>
+
+
     <footer class="main-footer primary">
       <div class="container">
         <h5>Copyright &copy; <span class="copyright-year">2017</span> Sapphire Open Systems</h5>
@@ -234,7 +322,7 @@ def loop():
     </footer>
     <section class="goal hidden">
       <div class="container">
-        <h1>Risks and Challenges</h1>
+        <h1 class="h2">Risks and Challenges</h1>
         <p>Electronics manufacturing is hard.  I would know &mdash; I've been doing it for over 10 years.  Issues always come up during manufacturing, but there's a lot that can be done to help mitigate them.</p>
         <div class="row">
           <div class="col-xs-12 col-sm-6">
