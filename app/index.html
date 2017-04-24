@@ -18,16 +18,17 @@
     <!-- endbuild -->
     <script src="https://use.typekit.net/pww1pws.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
-<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="favicons/manifest.json">
-<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#49ffa6">
-<link rel="shortcut icon" href="favicons/favicon.ico">
-<meta name="msapplication-TileColor" content="#49ffa6">
-<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
-<meta name="msapplication-config" content="favicons/browserconfig.xml">
-<meta name="theme-color" content="#ffffff"></head>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#49ffa6">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#49ffa6">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  </head>
   <body>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -68,42 +69,123 @@
       <div class="container">
         <h1 class="h2">LED Project Enabler</h1>
         <p>Chromatron is an open source pixel controller designed to make LED pixel projects easy and fun.</p>
-        <p>The goal of this project is to minimize the technical challenges to producing high quality LED projects and artwork.  Chromatron does a lot of work for you so you can spend more time perfecting your project, and less time chasing bugs.  Everything is designed to be easy to setup and use, but still be powerful enough to create sophisticated projects.</p>
+        <p>The goal of this project is to minimize the technical challenges to producing high quality LED projects and artwork. Chromatron does a lot of work for you so you can spend more time perfecting your project, and less time chasing bugs. Everything is designed to be easy to setup and use, but still be powerful enough to create sophisticated projects.</p>
         <p>Ultimately, Chromatron seeks to inspire and enable you to create something that you weren't sure you could do otherwise.</p>
       </div>
     </section>
 
 
-    <section class="why-use hidden">
+    <section class="why-use tertiary">
       <div class="container">
         <h1 class="h2">Why use Chromatron?</h1>
-        <p>Chromatron is packed with features that make LED projects awesome:</p>
-        <ul class="list-unstyled">
-          <li><h3>Supports a variety of LED pixel types without additional circuitry or firmware modifications.</h3>
-            Currently, Chromatron supports the APA102, WS2811, WS2812, WS2801, and analog PWM pixel strips.  All pixel mode settings are adjustable in real time, without recompiling firmware or rebooting.</li>
-          <li><h3>Control, program, and configure everything over Wi-Fi.</h3>
-          Ok, initial setup of the Wi-Fi itself has to be done over USB, but once you do that, it's Wi-Fi the rest of the way!</li>
-          <li><h3>Drive up to 300 pixels per controller.</h3>
-          You can do quite a lot with 300 pixels.  But if you need more, you aren't limited to just one Chromatron!</li>
-          <li><h3>Built in scripting engine.</h3>
-          Chromatron's FX Script is a simple language designed specifically for pixel graphics.  It runs on a customed designed virtual machine directly on Chromatron hardware.  Compiled FX scripts are quite small, which enables near instant code reloading.  You can even run the compiler in live mode, which reloads your script to target devices every time you hit save on your code editor.  The virtual machine and language are pixel-aware, which helps you write less code and helps the processor run as quickly as possible.</li>
-          <li><h3>Built in faders</h3>
-          Chromatron has built in faders for each pixel, along with global master and submaster dimmers.  Dimming curves can be adjusted on the fly.  Hue, saturation, and brightness can each be faded individually with different timings.  All fader calculations are 16 bits to ensure high quality, especially when using dimming curves.  Graphics data is reduced to 8 bit RGB only at the very last instant, when the graphics are transferred to the pixels themselves.</li>
-          <li><h3>Python library</h3>
-          Chromatron has a Python library to make it easy to integrate Chromatron into other projects.  It gives you access to everything Chromatron can do: graphics controls, scripting engine and compiler, firmware updates, device discovery, and more.</li>
-          <li><h3>Real time pixel streaming</h3>
-          Already have a source of graphics content?  FX script is an entirely optional feature.  You can stream raw HSV or RGB data over the network using the Python library.  Art-Net support is planned to be completed before hardware ships.</li>
-          <li><h3>Command line interface</h3>
-          Get up and running quickly.  The CLI gives you quick access to almost everything the Python library can do.</li>
-          <li><h3>Easy hardware connections</h3>
-          LED and power connections are made with a screw terminal.  Soldering (and unsoldering) risks damaging your electronics.  Having a screw terminal makes this simple and worry-free.</li>
-          <li><h3>Wide input voltage range</h3>
-          Chromatron works with 5 and 12 volt pixel strips.</li>
-          <li><h3>Small form factor</h3>
-          Just 1.25 by 2 inches.  Plus a tiny bit of overhang for the USB micro connector.</li>
-          <li><h3>Open source</h3>
-          All software and hardware will be released under OSI compatible licenses once the project hits the funding goal.</li>
-        </ul>
+        <!-- <p class="lead">Chromatron is packed with features that make LED projects awesome.</p> -->
+
+
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+
+
+
+
+
+            <ul class="media-list">
+              <li class="media">
+                <div class="media-left">
+                  <i class="fa fa-lightbulb-o fa-3x"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="media-heading">LED Pixel Support</h3>
+                  <p>Supports <a href="#tooltip" title="APA102, WS2811, WS2812, WS2801, and analog PWM pixel strips." data-toggle="tooltip">a variety of LED pixel types</a> without additional circuitry or firmware modifications. <a href="#more">More...</a><!-- All pixel mode settings are adjustable in real time, without recompiling firmware or rebooting. Drive up to 300 pixels per controller. --></p>
+                </div>
+              </li>
+
+
+              <li class="media">
+                <div class="media-left">
+                  <i class="fa fa-sliders fa-3x"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="media-heading">Built in faders</h3>
+                  <p>Chromatron has built in faders for each pixel, along with global master and submaster dimmers. <a href="#more">More...</a> <!-- Dimming curves can be adjusted on the fly. Hue, saturation, and brightness can each be faded individually with different timings. All fader calculations are 16 bits to ensure high quality, especially when using dimming curves. Graphics data is reduced to 8 bit RGB only at the very last instant, when the graphics are transferred to the pixels themselves. --></p>
+                </div>
+              </li>
+
+              <li class="media">
+                <div class="media-left">
+                  <i class="fa fa-wifi fa-3x"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="media-heading">Control &amp; program over Wi-Fi</h3>
+                  <p>Okay, initial setup of the Wi-Fi itself has to be done over USB, but once you do that, it's Wi-Fi the rest of the way!</p>
+                </div>
+              </li>
+
+              <!-- TODO -->
+              <li class="media hidden">
+                <div class="media-left">
+                  <i class="fa fa-camera-retro fa-3x"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="media-heading">Real time pixel streaming</h3>
+                  <p>Already have a source of graphics content?  FX script is an entirely optional feature. <a href="#more">More...</a><!-- You can stream raw HSV or RGB data over the network using the Python library. Art-Net support is planned to be completed before hardware ships.--></p>
+                </div>
+              </li>
+
+            </ul>
+
+
+
+
+          </div>
+
+          <div class="col-xs-12 col-sm-6">
+
+            <ul class="media-list">
+              <li class="media">
+                <div class="media-left">
+                  <i class="fa fa-bolt fa-3x"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="media-heading">Built in scripting engine.</h3>
+                  <p>Chromatron's FX Script is a simple language designed specifically for pixel graphics. <a href="#more">More...</a><!-- It runs on a customed designed virtual machine directly on Chromatron hardware.  Compiled FX scripts are quite small, which enables near instant code reloading. You can even run the compiler in live mode, which reloads your script to target devices every time you hit save on your code editor. The virtual machine and language are pixel-aware, which helps you write less code and helps the processor run as quickly as possible. --></p>
+                </div>
+              </li>
+
+              <li class="media">
+                <div class="media-left">
+                  <i class="fa fa-terminal fa-3x"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="media-heading">Python &amp; Command Line APIs</h3>
+                  <p>Chromatron has a Python library to make it easy to integrate Chromatron into other projects. <a href="#more">More...</a><!-- It gives you access to everything Chromatron can do: graphics controls, scripting engine and compiler, firmware updates, device discovery, and more. The Chromatron CLI gives you quick access to almost everything the Python library can do. --></p>
+                </div>
+              </li>
+
+              <li class="media">
+                <div class="media-left">
+                  <i class="fa fa-gift fa-3x"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="media-heading">And even more...</h3>
+                  <p>Real-time pixel streaming, simple hardware connections, and much more. <a href="#all-features">View all Chromatron features.</a></p>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+
+
+
+<!--
+            <h3>Easy hardware connections</h3>
+            <p>LED and power connections are made with a screw terminal. Soldering (and unsoldering) risks damaging your electronics. Having a screw terminal makes this simple and worry-free.</p>
+
+            <h3>Wide input voltage range</h3>
+            <p>Chromatron works with 5 and 12 volt pixel strips.</p> -->
+
       </div>
     </section>
 
@@ -111,8 +193,8 @@
     <section class="goal hidden">
       <div class="container">
         <h1 class="h2">Goal</h1>
-        <p>This Kickstarter is to raise money to build the first production run of Chromatron hardware.  The majority of the timeline will be used for coordinating hardware production, building hardware test systems, creating documentation and tutorial content, and of course bug fixes for any issues that crop up.</p>
-        <p>The project itself has been under heavy development since August 2016, and most major technical aspects are very usable.  The hardware itself has undergone five revisions, and over a dozen hand built examples are running 24/7.</p>
+        <p>This Kickstarter is to raise money to build the first production run of Chromatron hardware. The majority of the timeline will be used for coordinating hardware production, building hardware test systems, creating documentation and tutorial content, and of course bug fixes for any issues that crop up.</p>
+        <p>The project itself has been under heavy development since August 2016, and most major technical aspects are very usable. The hardware itself has undergone five revisions, and over a dozen hand built examples are running 24/7.</p>
       </div>
     </section>
 
@@ -124,7 +206,7 @@
     </section>
 
 
-    <section class="goal hidden">
+    <section class="api-examples">
       <div class="container">
         <h1 class="h2">API Examples</h1>
         <p class="lead">Discover, configure, and control devices over Wi-Fi with our Python and Command Line Interface:</p>
@@ -160,7 +242,7 @@ chromatron keys set gfx_master_dimmer 0.5
           </div>
         </div>
         <h3>Scripting Engine</h3>
-        <p>Generate graphics directly on hardware.  Compiles and loads quickly &mdash; get instant visual feedback.</p>
+        <p>Generate graphics directly on hardware. Compiles and loads quickly &mdash; get instant visual feedback.</p>
         <ul class="nav nav-tabs">
           <li role="presentation" class="active"><a href="#demo-1">Demo 1</a></li>
           <li role="presentation"><a href="#demo-2">Demo 2</a></li>
@@ -235,7 +317,7 @@ def loop():
               <li>160 MHz</li>
               <li>64K RAM</li>
             </ul>
-            <p>Handles Wi-Fi communications, scripting engine VM, pixel faders, and HSV to RGB colorspace conversion.  Connected to the real time processor via 4 MHz UART bridge.</p>
+            <p>Handles Wi-Fi communications, scripting engine VM, pixel faders, and HSV to RGB colorspace conversion. Connected to the real time processor via 4 MHz UART bridge.</p>
           </div>
         </div>
 
@@ -323,17 +405,17 @@ def loop():
     <section class="goal hidden">
       <div class="container">
         <h1 class="h2">Risks and Challenges</h1>
-        <p>Electronics manufacturing is hard.  I would know &mdash; I've been doing it for over 10 years.  Issues always come up during manufacturing, but there's a lot that can be done to help mitigate them.</p>
+        <p>Electronics manufacturing is hard. I would know &mdash; I've been doing it for over 10 years. Issues always come up during manufacturing, but there's a lot that can be done to help mitigate them.</p>
         <div class="row">
           <div class="col-xs-12 col-sm-6">
             <ul class="list-unstyled">
               <li>
                 <h3>Production lead times</h3>
-                <p>Lead times for production quantities of parts can be quite long. 6 to 8 weeks can be typical.  However, it is imprudent to order production quantities until your hardware design is finished, otherwise you may be stuck with 1000s of the wrong part.  We have an advantage here, in that Chromatron's hardware design is already finished, so we can confidently begin ordering high risk parts (such as processors and connectors) as soon as funds are available.</p>
+                <p>Lead times for production quantities of parts can be quite long. 6 to 8 weeks can be typical. However, it is imprudent to order production quantities until your hardware design is finished, otherwise you may be stuck with 1000s of the wrong part. We have an advantage here, in that Chromatron's hardware design is already finished, so we can confidently begin ordering high risk parts (such as processors and connectors) as soon as funds are available.</p>
               </li>
               <li>
                 <h3>Manufacturing errors</h3>
-                <p>Manufacturing errors can and do happen. Wrong parts, missing parts, misaligned parts, boards overheated &mdash; these are all things that can happen, and are all things I've dealt with in my professional work.  Chromatron is being built locally in Austin, TX at a vendor I have past experience with (with excellent results).  I can be on site in  20 minutes if issues crop up (there's no substitute for being able to troubleshoot in person).  Additionally, I will be doing a lower volume pilot run (100-250 units) to ensure any issues are worked out before committing resources to the full build.</p>
+                <p>Manufacturing errors can and do happen. Wrong parts, missing parts, misaligned parts, boards overheated &mdash; these are all things that can happen, and are all things I've dealt with in my professional work. Chromatron is being built locally in Austin, TX at a vendor I have past experience with (with excellent results). I can be on site in  20 minutes if issues crop up (there's no substitute for being able to troubleshoot in person). Additionally, I will be doing a lower volume pilot run (100-250 units) to ensure any issues are worked out before committing resources to the full build.</p>
               </li>
             </ul>
           </div>
@@ -341,11 +423,11 @@ def loop():
             <ul class="list-unstyled">
               <li>
                 <h3>Software bugs</h3>
-                <p>I take software issues very seriously and design my code to be as robust as possible.  While much of Chromatron's software is pretty mature at this point, no sane engineer would call their work bug free and I am no exception.  The open source nature of the project means you have the opportunity to review and comment on my work, as well as file bug reports (and feature requests!).  I use Chromatron 24/7 to run the lighting in my home, so I am personally invested in the quality of the software that runs it.</p>
+                <p>I take software issues very seriously and design my code to be as robust as possible. While much of Chromatron's software is pretty mature at this point, no sane engineer would call their work bug free and I am no exception. The open source nature of the project means you have the opportunity to review and comment on my work, as well as file bug reports (and feature requests!). I use Chromatron 24/7 to run the lighting in my home, so I am personally invested in the quality of the software that runs it.</p>
               </li>
               <li>
                 <h3>Communication</h3>
-                <p>Almost everyone on Kickstarter has heard of projects plagued by communications issues.  Chromatron is not going to be one of them.  I will communicate any and all issues that come up and what I'm doing to handle them, along with general progress of the various parts of the project.  It is my hope that Chromatron can become a sustainable business in the future, and I believe the only way that can happen is to earn the trust of my community of backers.</p>
+                <p>Almost everyone on Kickstarter has heard of projects plagued by communications issues. Chromatron is not going to be one of them. I will communicate any and all issues that come up and what I'm doing to handle them, along with general progress of the various parts of the project. It is my hope that Chromatron can become a sustainable business in the future, and I believe the only way that can happen is to earn the trust of my community of backers.</p>
               </li>
             </ul>
           </div>
