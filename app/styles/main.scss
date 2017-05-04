@@ -5,6 +5,7 @@
 // endbower
 
 @import 'vendor/bootstrap-sass/bootstrap-custom';
+@import 'vendor/prism/prism-tomorrow';
 
 @import 'base/type';
 
@@ -27,3 +28,4 @@
 @import 'pages/hardware';
 @import 'pages/open-source';
 @import 'pages/technical-details';
+@import 'pages/video';

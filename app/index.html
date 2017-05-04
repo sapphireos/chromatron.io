@@ -203,13 +203,6 @@
     </section>
 
 
-    <section class="video hidden inverse">
-      <div class="">
-        <iframe width="900" height="520" style="border: 0; width: 100%;" src="https://www.youtube-nocookie.com/embed/MEYIgJf872A?rel=0&amp;showinfo=0" allowfullscreen></iframe>
-      </div>
-    </section>
-
-
     <section class="api-examples">
       <div class="container">
         <h1 class="h2">API Examples</h1>
@@ -251,16 +244,17 @@ chromatron dimmer master 0.5
             </pre>
           </div>
         </div>
-        <h3>Scripting Engine</h3>
-        <p>Generate graphics directly on hardware. Compiles and loads quickly &mdash; get instant visual feedback.</p>
-        <ul class="nav nav-tabs">
-          <li role="presentation" class="active"><a href="#demo-1">Demo 1</a></li>
-          <li role="presentation"><a href="#demo-2">Demo 2</a></li>
-          <li role="presentation"><a href="#demo-3">Demo 3</a></li>
-        </ul>
-        <div id="demo-1">
-          <pre>
-            <code class="language-python">
+
+      </div>
+    </section>
+    <section class="custom-scripts">
+      <div class="container">
+        <h1 class="h2">Prototype with FX Script</h1>
+        <p class="lead">FX Script is a hybrid language based on Python that makes it easy to generate graphics directly on hardware. It allows you to compile and load scripts in real-time to get instant visual feedback.</p>
+        <div class="row">
+          <div class="col-xs-12 col-md-8">
+            <pre>
+              <code class="language-python">
 # this script generates rolling rainbow pattern
 
 # declare a global variable for current hue
@@ -288,19 +282,17 @@ def loop():
     # loop over all pixels in array
     for i in pix_count():
         pixels[i].hue = a
-        
-        # shift color for next iteration
-        a += 1.0 / pix_count()
 
-            </code>
-          </pre>
+        # shift color for next iteration
+        a += 1.0 / pix_count()</code>
+            </pre>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="embed-responsive embed-responsive-9by16">
+              <iframe src="https://www.youtube-nocookie.com/embed/bv1z3aF-_1o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
-        <div id="demo-2">
-        </div>
-        <div id="demo-3">
-        </div>
-        <p>This script generates this effect:</p>
-        <!-- TODO: (link to youtube video) -->
       </div>
     </section>
 
@@ -312,6 +304,13 @@ def loop():
           <img src="images/hw-diagram-vert.png" alt="Chromatron hardware prototype." class="img-responsive visible-xs">
           <img src="images/hw-diagram-horiz.png" alt="Chromatron hardware prototype." class="img-responsive hidden-xs">
         </p>
+      </div>
+    </section>
+
+
+    <section class="video inverse">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe src="https://www.youtube-nocookie.com/embed/TyCFVRvAzqU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </section>
 
@@ -478,8 +477,13 @@ def loop():
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="/bower_components/webfontloader/webfontloader.js"></script>
+    <script src="/bower_components/prism/prism.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
+    <script src="/bower_components/prism/components/prism-python.js"></script>
+    <script src="/bower_components/prism/components/prism-bash.js"></script>
+
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>

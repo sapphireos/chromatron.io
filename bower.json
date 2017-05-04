@@ -4,9 +4,15 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "webfontloader": "^1.6.27"
+    "webfontloader": "^1.6.27",
+    "prism": "prismjs#^1.6.0"
   },
   "overrides": {
+    "prism": {
+      "main": [
+        "prism.js"
+      ]
+    },
     "bootstrap-sass": {
       "main": [
         "assets/fonts/bootstrap/*",
