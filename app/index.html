@@ -220,12 +220,15 @@
             <pre>
               <code class="language-python">
 from chromatron import *
+
 # Discover devices in living room
 group = DeviceGroup('living_room')
+
 # Load rainbow effect script
 group.load_vm('rainbow.fx')
+
 # Set master dimmer to 50%
-group.master_dimmer = 0.5
+group.dimmer = 0.5
               </code>
             </pre>
           </div>
@@ -235,12 +238,15 @@ group.master_dimmer = 0.5
               <code class="language-bash">
 # Install Python library
 pip install chromatron
+
 # Discover devices in living room
 chromatron --query living_room discover
+
 # Load rainbow effect script to previous group
 chromatron vm load rainbow.fx
+
 # Set master dimmer to 50%
-chromatron keys set gfx_master_dimmer 0.5
+chromatron dimmer master 0.5
               </code>
             </pre>
           </div>
@@ -255,17 +261,37 @@ chromatron keys set gfx_master_dimmer 0.5
         <div id="demo-1">
           <pre>
             <code class="language-python">
+# this script generates rolling rainbow pattern
+
+# declare a global variable for current hue
 current_hue = Number()
+
+# init - runs once when script is loaded
 def init():
+    # set pixels to full colors (maximum saturation)
     pixels.sat = 1.0
+
+    # set to maximum brightness
     pixels.val = 1.0
+
+
+# runs periodically, frame rate is configurable
 def loop():
-    current_hue += 0.05
+    # increment the base hue so the rainbow pattern
+    # shifts across the pixels
+    current_hue += 0.005
+
+    # declare a local variable
     a = Number()
     a = current_hue
+
+    # loop over all pixels in array
     for i in pix_count():
         pixels[i].hue = a
+        
+        # shift color for next iteration
         a += 1.0 / pix_count()
+
             </code>
           </pre>
         </div>
