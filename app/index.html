@@ -69,12 +69,16 @@
     </section>
 
 
-    <section class="intro hidden">
+    <section class="intro">
       <div class="container">
-        <h1 class="h2">LED Project Enabler</h1>
-        <p>Chromatron is an open source pixel controller designed to make LED pixel projects easy and fun.</p>
-        <p>The goal of this project is to minimize the technical challenges to producing high quality LED projects and artwork. Chromatron does a lot of work for you so you can spend more time perfecting your project, and less time chasing bugs. Everything is designed to be easy to setup and use, but still be powerful enough to create sophisticated projects.</p>
-        <p>Ultimately, Chromatron seeks to inspire and enable you to create something that you weren't sure you could do otherwise.</p>
+        <div class="row">
+          <div class="col-xs-12 col-sm-8">
+            <h1 class="h2">LED Project Enabler</h1>
+            <p class="lead">Chromatron is an open source pixel controller designed to make LED pixel projects easy and&nbsp;fun.</p>
+            <!-- <p>The goal of this project is to minimize the technical challenges to producing high quality LED projects and artwork. Chromatron does a lot of work for you so you can spend more time perfecting your project, and less time chasing bugs. Everything is designed to be easy to setup and use, but still be powerful enough to create sophisticated projects.</p>
+            <p>Ultimately, Chromatron seeks to inspire and enable you to create something that you weren't sure you could do otherwise.</p> -->
+          </div>
+        </div>
       </div>
     </section>
 
@@ -422,7 +426,7 @@ def loop():
 
     <footer class="main-footer primary">
       <div class="container">
-        <h5>Copyright &copy; <span class="copyright-year">2017</span> Sapphire Open Systems</h5>
+        <p class="">Copyright &copy; <span class="copyright-year">2017</span> Sapphire Open Systems</p>
         <ul class="list-inline">
           <li><a rel="me" href="https://github.com/sapphireos/"><i class="fa fa-github fa-2x"></i></a></li>
           <li><a rel="me" href="https://www.facebook.com/sapphirechromatron/"><i class="fa fa-facebook-official fa-2x"></i></a></li>
@@ -431,38 +435,8 @@ def loop():
         </ul>
       </div>
     </footer>
-    <section class="goal hidden">
-      <div class="container">
-        <h1 class="h2">Risks and Challenges</h1>
-        <p>Electronics manufacturing is hard. I would know &mdash; I've been doing it for over 10 years. Issues always come up during manufacturing, but there's a lot that can be done to help mitigate them.</p>
-        <div class="row">
-          <div class="col-xs-12 col-sm-6">
-            <ul class="list-unstyled">
-              <li>
-                <h3>Production lead times</h3>
-                <p>Lead times for production quantities of parts can be quite long. 6 to 8 weeks can be typical. However, it is imprudent to order production quantities until your hardware design is finished, otherwise you may be stuck with 1000s of the wrong part. We have an advantage here, in that Chromatron's hardware design is already finished, so we can confidently begin ordering high risk parts (such as processors and connectors) as soon as funds are available.</p>
-              </li>
-              <li>
-                <h3>Manufacturing errors</h3>
-                <p>Manufacturing errors can and do happen. Wrong parts, missing parts, misaligned parts, boards overheated &mdash; these are all things that can happen, and are all things I've dealt with in my professional work. Chromatron is being built locally in Austin, TX at a vendor I have past experience with (with excellent results). I can be on site in  20 minutes if issues crop up (there's no substitute for being able to troubleshoot in person). Additionally, I will be doing a lower volume pilot run (100-250 units) to ensure any issues are worked out before committing resources to the full build.</p>
-              </li>
-            </ul>
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            <ul class="list-unstyled">
-              <li>
-                <h3>Software bugs</h3>
-                <p>I take software issues very seriously and design my code to be as robust as possible. While much of Chromatron's software is pretty mature at this point, no sane engineer would call their work bug free and I am no exception. The open source nature of the project means you have the opportunity to review and comment on my work, as well as file bug reports (and feature requests!). I use Chromatron 24/7 to run the lighting in my home, so I am personally invested in the quality of the software that runs it.</p>
-              </li>
-              <li>
-                <h3>Communication</h3>
-                <p>Almost everyone on Kickstarter has heard of projects plagued by communications issues. Chromatron is not going to be one of them. I will communicate any and all issues that come up and what I'm doing to handle them, along with general progress of the various parts of the project. It is my hope that Chromatron can become a sustainable business in the future, and I believe the only way that can happen is to earn the trust of my community of backers.</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+
+
     <!-- Google Analytics -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
