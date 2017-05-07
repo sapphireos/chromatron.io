@@ -1,88 +1,32 @@
-
-@import 'variables';
+@import 'abstracts/variables';
 // $fa-font-path: '../bower_components/font-awesome/fonts';
 
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-@import 'forms';
-@import 'type';
-@import 'buttons';
-@import 'primary';
-@import 'inverse';
+@import 'vendor/bootstrap-sass/bootstrap-custom';
+@import 'vendor/prism/prism-tomorrow';
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: $gray-darker;
-  color: $gray-base;
-  padding: 0.2em 0;
-}
+@import 'base/type';
 
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4 {
-  // font-weight: 800;
+@import 'layout/container';
+@import 'layout/header';
+@import 'layout/footer';
 
-  // font-style: italic;
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/container-primary';
+@import 'components/container-secondary';
+@import 'components/container-tertiary';
+@import 'components/container-inverse';
+@import 'components/browser-upgrade';
 
-  letter-spacing: 3px;
-
-}
-
-section,
-footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-
-header {
-  background-color: $brand-primary;
-  height: 6px;
-}
-
-section.hero {
-  background-image: url('../images/jeremy-coffee-prototyping.jpg');
-  background-position: center center;
-  background-size: cover;
-
-  padding: 100px 0;
-
-  h1, .h1,
-  h2, .h2,
-  h3, .h3,
-  h4, .h4 { margin-bottom: 1em; }
-
-  @media (min-width: $screen-md-min) {
-    .mc-field-group input { width: 320px; }
-  }
-}
-
-
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-}
+@import 'pages/intro';
+@import 'pages/hero';
+@import 'pages/why-use';
+@import 'pages/about';
+@import 'pages/hardware';
+@import 'pages/open-source';
+@import 'pages/technical-details';
+@import 'pages/video';

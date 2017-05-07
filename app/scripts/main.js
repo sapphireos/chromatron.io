@@ -6,3 +6,9 @@ var d = new Date(),
 document.querySelectorAll('.copyright-year').forEach(function (span) {
   span.innerHTML = y;
 });
+
+
+// enable tooltips
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+});
