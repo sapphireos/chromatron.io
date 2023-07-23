@@ -1,9 +1,8 @@
 import type { V2_MetaFunction } from "@remix-run/node";
-import { useEffect } from "react";
+
 import { Intro } from "../pages/Intro";
 // import { Kickstarter } from "../pages/Kickstarter";
 import { TechnicalDetails } from "../pages/TechnicalDetails";
-import { Footer } from "../pages/Footer";
 import { OpenSource } from "../pages/OpenSource";
 import { AboutUs } from "../pages/AboutUs";
 import { ApiExamples } from "../pages/ApiExamples";
@@ -12,6 +11,7 @@ import { CustomScripts } from "../pages/CustomScripts";
 import { Hardware } from "../pages/Hardware";
 import { KickstarterVideo } from "../pages/KickstarterVideo";
 import { Hero } from "../pages/Hero";
+import Template from "~/components/Template";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -25,14 +25,8 @@ export const meta: V2_MetaFunction = () => {
 };
 
 export default function Index() {
-  useEffect(() => {
-    try {
-      window.Typekit.load({ async: !0 });
-    } catch (a) {}
-  }, []);
-
   return (
-    <div>
+    <Template>
       <Hero />
       <Intro />
       <Features />
@@ -44,12 +38,6 @@ export default function Index() {
       <TechnicalDetails />
       <AboutUs />
       <OpenSource />
-      <Footer />
-
-      {/* legacy scripts from chromatrion.io v1 */}
-      {/* <script src="scripts/vendor.js"></script> */}
-      {/* <script src="scripts/plugins.js"></script> */}
-      {/* <script src="scripts/main.js"></script> */}
-    </div>
+    </Template>
   );
 }

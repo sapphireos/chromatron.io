@@ -8,6 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { useEffect } from "react";
 
 export const links: LinksFunction = () => [
   {
@@ -52,6 +53,11 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
+  useEffect(() => {
+    try {
+      window.Typekit.load({ async: !0 });
+    } catch (a) {}
+  }, []);
   return (
     <html lang="en">
       <head>
