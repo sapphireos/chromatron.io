@@ -1,3 +1,6 @@
+import HwDimensSide from "~/assets/HwDimensSide";
+import HwDimensTop from "~/assets/HwDimensTop";
+
 export const TechnicalDetails = () => (
   <section className="technical-details">
     <div className="container">
@@ -67,19 +70,27 @@ export const TechnicalDetails = () => (
             </li>
           </ul>
           <div className="row">
-            <div className="col-xs-12 col-sm-6">
-              <img
+            <div
+              className="col-xs-12 col-sm-6"
+              style={{ paddingTop: "16px", paddingBottom: "16px" }}
+            >
+              {/* <img
                 className="img-responsive"
                 src="images/hw-dimens-top.png"
                 alt="side dimensions"
-              />
+              /> */}
+              <HwDimensTop className="img-responsive" />
             </div>
-            <div className="col-xs-12 col-sm-6">
-              <img
+            <div
+              className="col-xs-12 col-sm-6"
+              style={{ paddingTop: "16px", paddingBottom: "16px" }}
+            >
+              {/* <img
                 className="img-responsive"
                 src="images/hw-dimens-side.png"
                 alt="side dimensions"
-              />
+              /> */}
+              <HwDimensSide className="img-responsive" />
             </div>
           </div>
         </div>
