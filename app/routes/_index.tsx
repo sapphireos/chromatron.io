@@ -1,5 +1,6 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import { useEffect } from "react";
+import { CopyBlock, dracula as theme } from "react-code-blocks";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -18,6 +19,13 @@ export default function Index() {
       window.Typekit.load({ async: !0 });
     } catch (a) {}
   }, []);
+
+  const codeBlockProps = {
+    theme,
+    showLineNumbers: true,
+    wrapLines: true,
+  };
+
   return (
     <div>
       {/* legacy chromatron.io v1 scripts */}
@@ -123,15 +131,10 @@ export default function Index() {
                   <div className="media-body">
                     <h3 className="media-heading">LED Pixel Drivers</h3>
                     <p>
-                      Drive 300 pixels of a
-                      <a
-                        href="#tooltip"
-                        title="Chromatron currently supports APA102, WS2811, WS2812, WS2801, SK6812, and analog PWM pixel strips."
-                        data-toggle="tooltip"
-                      >
-                        variety of types
-                      </a>
-                      without additional circuitry or firmware modifications.
+                      Drive 300 pixels of a variety of types without additional
+                      circuitry or firmware modifications. Chromatron currently
+                      supports APA102, WS2811, WS2812, WS2801, SK6812, and
+                      analog PWM pixel strips.
                     </p>
                   </div>
                 </li>
@@ -248,39 +251,46 @@ export default function Index() {
           <div className="row">
             <div className="col-xs-12 col-sm-6">
               <h3>Python</h3>
-              <pre>
-                {"              "}
-                <code className="language-python">
-                  {"\n"}from chromatron import *{"\n"}
-                  {"\n"}# Discover devices in living room{"\n"}group =
-                  DeviceGroup('living_room'){"\n"}
-                  {"\n"}# Load rainbow effect script{"\n"}
-                  group.load_vm('rainbow.fx'){"\n"}
-                  {"\n"}# Set master dimmer to 50%{"\n"}group.dimmer = 0.5{"\n"}
-                  {"              "}
-                </code>
-                {"\n"}
-                {"            "}
-              </pre>
+              <CopyBlock
+                {...codeBlockProps}
+                language="python"
+                theme={theme}
+                showLineNumbers
+                text={`
+from chromatron import *
+
+# Discover devices in living room
+group =
+DeviceGroup('living_room')
+
+# Load rainbow effect script
+group.load_vm('rainbow.fx')
+
+# Set master dimmer to 50%
+group.dimmer = 0.5
+                  `}
+              />
             </div>
             <div className="col-xs-12 col-sm-6">
               <h3>Command Line</h3>
-              <pre>
-                {"              "}
-                <code className="language-bash">
-                  {"\n"}# Install Python library{"\n"}pip install chromatron
-                  {"\n"}
-                  {"\n"}# Discover devices in living room{"\n"}chromatron
-                  --query living_room discover{"\n"}
-                  {"\n"}# Load rainbow FX script to previous group{"\n"}
-                  chromatron vm load rainbow.fx{"\n"}
-                  {"\n"}# Set master dimmer to 50%{"\n"}chromatron dimmer master
-                  0.5{"\n"}
-                  {"              "}
-                </code>
-                {"\n"}
-                {"            "}
-              </pre>
+
+              <CopyBlock
+                {...codeBlockProps}
+                language="shell"
+                text={`
+# Install Python library
+pip install chromatron
+
+# Discover devices in living room
+chromatron --query living_room discover
+
+# Load rainbow FX script to previous group
+chromatron vm load rainbow.fx
+
+# Set master dimmer to 50%
+chromatron dimmer master 0.5
+`}
+              />
             </div>
           </div>
         </div>
@@ -296,40 +306,39 @@ export default function Index() {
           </p>
           <div className="row">
             <div className="col-xs-12 col-md-8">
-              <pre>
-                {"              "}
-                <code className="language-python">
-                  {"\n"}# this script generates a rolling rainbow pattern{"\n"}
-                  {"\n"}# declare a global variable for current hue{"\n"}
-                  current_hue = Number(){"\n"}
-                  {"\n"}# init - runs once when script is loaded{"\n"}def
-                  init():{"\n"}
-                  {"    "}# set pixels to full colors (maximum saturation){"\n"}
-                  {"    "}pixels.sat = 1.0{"\n"}
-                  {"\n"}
-                  {"    "}# set to maximum brightness{"\n"}
-                  {"    "}pixels.val = 1.0{"\n"}
-                  {"\n"}
-                  {"\n"}# runs periodically, frame rate is configurable{"\n"}def
-                  loop():{"\n"}
-                  {"    "}# increment the base hue so the rainbow pattern{"\n"}
-                  {"    "}# shifts across the pixels{"\n"}
-                  {"    "}current_hue += 0.005{"\n"}
-                  {"\n"}
-                  {"    "}# declare a local variable{"\n"}
-                  {"    "}a = Number(){"\n"}
-                  {"    "}a = current_hue{"\n"}
-                  {"\n"}
-                  {"    "}# loop over all pixels in array{"\n"}
-                  {"    "}for i in pix_count():{"\n"}
-                  {"        "}pixels[i].hue = a{"\n"}
-                  {"\n"}
-                  {"        "}# shift color for next iteration{"\n"}
-                  {"        "}a += 1.0 / pix_count()
-                </code>
-                {"\n"}
-                {"            "}
-              </pre>
+              <CopyBlock
+                {...codeBlockProps}
+                language="python"
+                text={`
+# this script generates a rolling rainbow pattern
+# declare a global variable for current hue
+current_hue = Number()
+# init - runs once when script is loadeddef
+init():
+  # set pixels to full colors (maximum saturation)
+  pixels.sat = 1.0
+
+  # set to maximum brightness
+  pixels.val = 1.0
+
+# runs periodically, frame rate is configurabledef
+loop():
+  # increment the base hue so the rainbow pattern
+  # shifts across the pixels
+  current_hue += 0.005
+
+  # declare a local variable
+  a = Number()
+  a = current_hue
+
+  # loop over all pixels in array
+  for i in pix_count():
+    pixels[i].hue = a
+
+    # shift color for next iteration
+    a += 1.0 / pix_count()
+                `}
+              />
             </div>
             <div className="col-xs-12 col-md-4">
               <div className="embed-responsive embed-responsive-9by16">
