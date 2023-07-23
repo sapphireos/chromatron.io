@@ -12,41 +12,41 @@ import {
 export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
-    href: "styles/main.css",
+    href: "/styles/main.css",
   },
   {
     rel: "stylesheet",
-    href: "styles/font-awesome-4.7.0/css/font-awesome.min.css",
+    href: "/styles/font-awesome-4.7.0/css/font-awesome.min.css",
   },
   {
     rel: "apple-touch-icon",
     sizes: "180x180",
-    href: "favicons/apple-touch-icon.png",
+    href: "/favicons/apple-touch-icon.png",
   },
   {
     rel: "icon",
     type: "image/png",
-    href: "favicons/favicon-32x32.png",
+    href: "/favicons/favicon-32x32.png",
     sizes: "32x32",
   },
   {
     rel: "icon",
     type: "image/png",
-    href: "favicons/favicon-16x16.png",
+    href: "/favicons/favicon-16x16.png",
     sizes: "16x16",
   },
   // {
   //   rel: "manifest",
-  //   href: "favicons/manifest.json",
+  //   href: "/favicons/manifest.json",
   // },
   {
     rel: "mask-icon",
-    href: "favicons/safari-pinned-tab.svg",
+    href: "/favicons/safari-pinned-tab.svg",
     color: "#49ffa6",
   },
   {
     rel: "shortcut icon",
-    href: "favicons/favicon.ico",
+    href: "/favicons/favicon.ico",
   },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];

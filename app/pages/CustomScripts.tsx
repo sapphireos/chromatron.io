@@ -53,7 +53,8 @@ def loop():
               <iframe
                 title="FX Script demo"
                 src="https://www.youtube-nocookie.com/embed/bv1z3aF-_1o?rel=0&showinfo=0"
-                // frameBorder={0}
+                frameBorder={0}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
             </div>
