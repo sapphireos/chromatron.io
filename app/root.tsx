@@ -79,6 +79,11 @@ export default function App() {
         <meta name="theme-color" content="#ffffff" />
         <Meta />
         <Links />
+
+        {/* legacy chromatron.io v1 scripts */}
+        {/* <script src="https://use.fontawesome.com/dee7484932.js"></script> */}
+        {/* <script src="scripts/vendor/modernizr.js"></script> */}
+        <script src="https://use.typekit.net/pww1pws.js"></script>
       </head>
       <body>
         <Outlet />

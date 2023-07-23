@@ -1,6 +1,6 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import { useEffect } from "react";
-import { CopyBlock, dracula as theme } from "react-code-blocks";
+import CodeBlock from "~/components/CodeBlock";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -20,19 +20,8 @@ export default function Index() {
     } catch (a) {}
   }, []);
 
-  const codeBlockProps = {
-    theme,
-    showLineNumbers: true,
-    wrapLines: true,
-  };
-
   return (
     <div>
-      {/* legacy chromatron.io v1 scripts */}
-      {/* <script src="https://use.fontawesome.com/dee7484932.js"></script> */}
-      {/* <script src="scripts/vendor/modernizr.js"></script> */}
-      <script src="https://use.typekit.net/pww1pws.js"></script>
-
       <section className="hero inverse">
         <div className="container">
           <img
@@ -48,61 +37,6 @@ export default function Index() {
             <br />
             Controller
           </h1>
-          {/* <div id="mc_embed_signup">
-            <form
-              action="//sapphireos.us2.list-manage.com/subscribe/post?u=4cc3e5c8a348c836b21e5cfbb&id=b0152474aa"
-              method="post"
-              id="mc-embedded-subscribe-form"
-              name="mc-embedded-subscribe-form"
-              className="form-inline validate"
-              target="_blank"
-              noValidate
-            >
-              <div id="mc_embed_signup_scroll">
-                <div id="mce-responses" className="form-group clear">
-                  <div
-                    className="response"
-                    id="mce-error-response"
-                    style={{ display: "none" }}
-                  />
-                  <div
-                    className="response"
-                    id="mce-success-response"
-                    style={{ display: "none" }}
-                  />
-                </div>
-                <div className="mc-field-group form-group form-group-lg">
-                  <label className="sr-only" htmlFor="mce-EMAIL">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    name="EMAIL"
-                    className="required email form-control"
-                    placeholder="Email"
-                    id="mce-EMAIL"
-                  />
-                </div>
-                <div
-                  style={{ position: "absolute", left: "-5000px" }}
-                  aria-hidden
-                >
-                  <input
-                    type="text"
-                    name="b_4cc3e5c8a348c836b21e5cfbb_b0152474aa"
-                    tabIndex={-1}
-                  />
-                </div>
-                <input
-                  type="submit"
-                  defaultValue="Get Updates"
-                  name="subscribe"
-                  id="mc-embedded-subscribe"
-                  className="button btn btn-secondary btn-lg btn-block"
-                />
-              </div>
-            </form>
-          </div> */}
         </div>
       </section>
       <section className="intro">
@@ -251,13 +185,9 @@ export default function Index() {
           <div className="row">
             <div className="col-xs-12 col-sm-6">
               <h3>Python</h3>
-              <CopyBlock
-                {...codeBlockProps}
+              <CodeBlock
                 language="python"
-                theme={theme}
-                showLineNumbers
-                text={`
-from chromatron import *
+                text={`from chromatron import *
 
 # Discover devices in living room
 group =
@@ -273,12 +203,9 @@ group.dimmer = 0.5
             </div>
             <div className="col-xs-12 col-sm-6">
               <h3>Command Line</h3>
-
-              <CopyBlock
-                {...codeBlockProps}
+              <CodeBlock
                 language="shell"
-                text={`
-# Install Python library
+                text={`# Install Python library
 pip install chromatron
 
 # Discover devices in living room
@@ -288,8 +215,7 @@ chromatron --query living_room discover
 chromatron vm load rainbow.fx
 
 # Set master dimmer to 50%
-chromatron dimmer master 0.5
-`}
+chromatron dimmer master 0.5`}
               />
             </div>
           </div>
@@ -306,11 +232,9 @@ chromatron dimmer master 0.5
           </p>
           <div className="row">
             <div className="col-xs-12 col-md-8">
-              <CopyBlock
-                {...codeBlockProps}
+              <CodeBlock
                 language="python"
-                text={`
-# this script generates a rolling rainbow pattern
+                text={`# this script generates a rolling rainbow pattern
 # declare a global variable for current hue
 current_hue = Number()
 # init - runs once when script is loadeddef
