@@ -16,7 +16,7 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <Template>
+    <Template header>
       <section className="privacy-policy">
         <div className="container">
           <h1 className="h2">Privacy Policy</h1>
