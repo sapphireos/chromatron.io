@@ -17,8 +17,7 @@ export function ApiExamples() {
               text={`from chromatron import *
 
 # Discover devices in living room
-group =
-DeviceGroup('living_room')
+group = DeviceGroup('living_room')
 
 # Load rainbow effect script
 group.load_vm('rainbow.fx')
