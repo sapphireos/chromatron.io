@@ -31,7 +31,7 @@ export function Features() {
               <MediaItem icon="camera-retro" title="Real time pixel streaming">
                 <p>
                   Already have a source of graphics content? FX script is an
-                  entirely optional feature. <a href="#more">More...</a>
+                  entirely optional feature.
                 </p>
               </MediaItem>
             </ul>

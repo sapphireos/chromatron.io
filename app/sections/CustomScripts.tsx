@@ -12,7 +12,7 @@ export function CustomScripts() {
           get instant visual feedback.
         </p>
         <div className="row">
-          <div className="col-xs-12 col-md-8">
+          <div className="col-xs-12 col-md-8 mb-10">
             <CodeBlock
               language="python"
               text={`# this script generates a rolling rainbow pattern

@@ -10,7 +10,7 @@ export function ApiExamples() {
           library and Command Line Interface tools:
         </p>
         <div className="row">
-          <div className="col-xs-12 col-sm-6">
+          <div className="col-xs-12 col-sm-6 mb-10">
             <h3>Python</h3>
             <CodeBlock
               language="python"
@@ -27,7 +27,7 @@ group.dimmer = 0.5
                   `}
             />
           </div>
-          <div className="col-xs-12 col-sm-6">
+          <div className="col-xs-12 col-sm-6 mb-10">
             <h3>Command Line</h3>
             <CodeBlock
               language="shell"
