@@ -1,14 +1,22 @@
 import { Link } from "@remix-run/react";
+import { useEffect, useState } from "react";
 
 import { brand } from "~/utils";
 
 export function Footer() {
+  const [copyrightYear, setCopyrightYear] = useState(-1);
+
+  useEffect(() => {
+    const year = new Date().getFullYear();
+    setCopyrightYear(year);
+  }, []);
+
   return (
     <footer className="main-footer primary">
       <div className="container">
         <p>
           Copyright &copy;{" "}
-          <span className="copyright-year">{new Date().getFullYear()}</span>{" "}
+          <span className="copyright-year">{copyrightYear || 2023}</span>{" "}
           {brand.parentCompanyLegal} {"// "}
           <Link to="/privacy">Privacy Policy</Link>
         </p>
