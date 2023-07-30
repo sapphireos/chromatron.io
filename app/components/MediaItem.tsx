@@ -20,7 +20,7 @@ export const MediaItem = ({
       <h3 className="media-heading" style={{ marginBottom: "0.2em" }}>
         {title}
       </h3>
-      <p>{children}</p>
+      {children}
     </div>
   </li>
 );
