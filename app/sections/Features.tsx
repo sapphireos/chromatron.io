@@ -28,12 +28,12 @@ export function Features() {
                   Easily control and coordinate multiple devices wirelessly.
                 </p>
               </MediaItem>
-              <MediaItem icon="camera-retro" title="Real time pixel streaming">
+              {/* <MediaItem icon="camera-retro" title="Real time pixel streaming">
                 <p>
                   Already have a source of graphics content? FX script is an
                   entirely optional feature.
                 </p>
-              </MediaItem>
+              </MediaItem> */}
             </ul>
           </div>
           <div className="col-xs-12 col-sm-6">
