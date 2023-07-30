@@ -1,3 +1,6 @@
+import osiLogoOutline from "./osi-logo-outline.svg";
+import oshwLogoOutline from "./oshw-logo-outline.svg";
+
 export function OpenSource() {
   return (
     <section className="open-source secondary">
@@ -15,8 +18,9 @@ export function OpenSource() {
               height={180}
               width={172}
               className="img-responsive"
-              src="images/osi-logo-outline.svg"
+              src={osiLogoOutline}
               alt="Open Source Initiative logo"
+              loading="lazy"
             />
             <h4>
               Open Source
@@ -29,8 +33,9 @@ export function OpenSource() {
               height={180}
               width={172}
               className="img-responsive"
-              src="images/oshw-logo-outline.svg"
+              src={oshwLogoOutline}
               alt="Open Source Hardware logo"
+              loading="lazy"
             />
             <h4>
               Open Source

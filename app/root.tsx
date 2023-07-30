@@ -10,6 +10,8 @@ import {
 } from "@remix-run/react";
 import { useEffect } from "react";
 
+import logoWhite from "./assets/logo-white.svg";
+
 export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
@@ -48,6 +50,16 @@ export const links: LinksFunction = () => [
   {
     rel: "shortcut icon",
     href: "/favicons/favicon.ico",
+  },
+  {
+    rel: "preload",
+    as: "image",
+    href: logoWhite,
+  },
+  {
+    rel: "preload",
+    as: "image",
+    href: "/images/jeremy-coffee-prototyping.jpg",
   },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
@@ -90,9 +102,6 @@ export default function App() {
         <Meta />
         <Links />
 
-        {/* legacy chromatron.io v1 scripts */}
-        {/* <script src="https://use.fontawesome.com/dee7484932.js"></script> */}
-        {/* <script src="scripts/vendor/modernizr.js"></script> */}
         <script src="https://use.typekit.net/pww1pws.js"></script>
       </head>
       <body>

@@ -78,6 +78,7 @@ export const TechnicalDetails = () => (
                 className="img-responsive"
                 src="images/hw-dimens-top.png"
                 alt="side dimensions"
+                loading="lazy"
               /> */}
               <HwDimensTop className="img-responsive" />
             </div>
@@ -89,6 +90,7 @@ export const TechnicalDetails = () => (
                 className="img-responsive"
                 src="images/hw-dimens-side.png"
                 alt="side dimensions"
+                loading="lazy"
               /> */}
               <HwDimensSide className="img-responsive" />
             </div>
