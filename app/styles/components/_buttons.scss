@@ -1,0 +1,63 @@
+.btn {
+  font-family: $headings-font-family;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+$btn-secondary-color: $btn-primary-color !default;
+$btn-secondary-bg: $btn-primary-bg !default;
+$btn-secondary-border: $btn-primary-border !default;
+
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
+
+
+
+
+
+// Modify all mobile buttons to be block by default
+// --------------------------------------------------
+
+.btn {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn + .btn {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .btn {
+    display: inline-block;
+    width: auto;
+  }
+
+  // Vertically space out multiple block buttons
+  .btn + .btn {
+    margin-top: auto;
+  }
+
+  // Specificity overrides
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    &.btn {
+      width: auto;
+    }
+  }
+}
