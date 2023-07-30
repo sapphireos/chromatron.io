@@ -14,6 +14,21 @@ const theme = {
         sans: ["proxima-nova", ...defaultTheme.fontFamily.sans],
         display: ["rift-soft", "proxima-nova", ...defaultTheme.fontFamily.sans],
       },
+
+      fontSize: {
+        sm: "0.85rem",
+        base: "1rem",
+        lg: "1.25rem",
+        xl: "1.45rem",
+        "2xl": "1.563rem",
+        "3xl": "1.7rem",
+        "4xl": "3.43rem",
+        "5xl": "5.14rem",
+      },
+
+      backgroundImage: {
+        hero: `url('/images/jeremy-coffee-prototyping.jpg')`,
+      },
     },
 
     // overrides

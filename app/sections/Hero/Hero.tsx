@@ -19,10 +19,12 @@ import logoWhite from "../../assets/logo-white.svg";
 
 export function Hero() {
   return (
-    <section className="hero inverse">
+    <section
+      className={`hero inverse bg-hero bg-center bg-cover py-[100px] px-0`}
+    >
       <div className="container">
         <img height={80} width={54} src={logoWhite} alt="Chromatron" />
-        <h1 className="h2">
+        <h1 className="h2 mb-5">
           WiFi
           <br />
           Pixel
