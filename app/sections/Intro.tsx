@@ -1,3 +1,18 @@
+// section.intro {
+//   background-image: url('../images/photo-c-coil.jpg');
+//   background-repeat: no-repeat;
+//   background-position: center bottom;
+//   // background-attachment: fixed;
+//   background-size: 80%;
+//   padding-bottom: 40%;
+
+//   @media (min-width: $screen-sm) {
+//     background-position: 60vw center;
+//     background-size: contain;
+//     padding-bottom: 50px;
+//   }
+// }
+
 export const Intro = () => (
   <section className="intro">
     <div className="container">

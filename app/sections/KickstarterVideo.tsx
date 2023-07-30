@@ -1,6 +1,12 @@
 export function KickstarterVideo() {
   return (
-    <section className="video inverse">
+    <section
+      className="video inverse"
+      style={{
+        paddingBottom: 0,
+        paddingTop: 0,
+      }}
+    >
       <div className="embed-responsive embed-responsive-16by9">
         <iframe
           title="Chromatron Kickstarter video"
