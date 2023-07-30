@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { brand } from "~/utils";
 
 export function Footer() {
-  const [copyrightYear, setCopyrightYear] = useState(-1);
+  const [copyrightYear, setCopyrightYear] = useState(2023);
 
   useEffect(() => {
     const year = new Date().getFullYear();
@@ -16,7 +16,7 @@ export function Footer() {
       <div className="container">
         <p>
           Copyright &copy;{" "}
-          <span className="copyright-year">{copyrightYear || 2023}</span>{" "}
+          <span className="copyright-year">{copyrightYear}</span>{" "}
           {brand.parentCompanyLegal} {"// "}
           <Link to="/privacy">Privacy Policy</Link>
         </p>
