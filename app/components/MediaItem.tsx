@@ -6,13 +6,13 @@ export const MediaItem = ({
   icon = "lightbulb-o",
 }) => (
   <li className="media">
-    <div className="media-left">
+    <div className="media-left ">
       <i
         className={`fa fa-${icon} fa-3x`}
         style={{
           color: palette.gray[300],
           textAlign: "center",
-          width: "72",
+          width: 72,
         }}
       />
     </div>
