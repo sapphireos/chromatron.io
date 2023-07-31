@@ -29,7 +29,7 @@ group.dimmer = 0.5`}
           <div className="col-xs-12 col-sm-6 mb-10">
             <h3>Command Line</h3>
             <Code
-              language="shell"
+              language="bash"
               text={`# Install Python library
 pip install chromatron
 
