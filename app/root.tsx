@@ -55,11 +55,6 @@ export const links: LinksFunction = () => [
     rel: "shortcut icon",
     href: "/favicons/favicon.ico",
   },
-  // {
-  //   rel: "preload",
-  //   as: "image",
-  //   href: logoWhite,
-  // },
   {
     rel: "preload",
     as: "image",
@@ -124,7 +119,7 @@ export default function App() {
   useEffect(() => {
     try {
       window.Typekit.load({ async: !0 });
-    } catch (a) {}
+    } catch (a) { }
   }, []);
   return (
     <html

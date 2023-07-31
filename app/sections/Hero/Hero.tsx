@@ -1,4 +1,5 @@
-import logoWhite from "../../assets/logo-white.svg";
+import palette from "~/styles/palette";
+import Logo from "~/assets/LogoWhite";
 
 // section.hero {
 //   background-image: url('../images/jeremy-coffee-prototyping.jpg');
@@ -23,7 +24,7 @@ export function Hero() {
       className={`hero inverse bg-hero bg-center bg-cover py-[100px] px-0`}
     >
       <div className="container">
-        <img height={80} width={54} src={logoWhite} alt="Chromatron" />
+        <Logo height={80} width={54} color={palette.gray.white} />
         <h1 className="h2 mb-5">
           WiFi
           <br />
