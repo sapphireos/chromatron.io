@@ -12,9 +12,6 @@ import { useEffect } from "react";
 
 import tailwind from "./styles/tailwind.css";
 
-import logoWhite from "./assets/logo-white.svg";
-import palette from "./styles/palette";
-
 export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
@@ -58,11 +55,11 @@ export const links: LinksFunction = () => [
     rel: "shortcut icon",
     href: "/favicons/favicon.ico",
   },
-  {
-    rel: "preload",
-    as: "image",
-    href: logoWhite,
-  },
+  // {
+  //   rel: "preload",
+  //   as: "image",
+  //   href: logoWhite,
+  // },
   {
     rel: "preload",
     as: "image",
@@ -90,23 +87,15 @@ export const meta: V2_MetaFunction = () => {
     },
     {
       property: "og:image",
-      content: "images/jeremy-coffee-prototyping.jpg",
-    },
-    {
-      name: "msapplication-TileColor",
-      content: palette.primary[500],
+      content: "/images/jeremy-coffee-prototyping.jpg",
     },
     {
       name: "msapplication-TileImage",
-      content: "favicons/mstile-144x144.png",
+      content: "/favicons/mstile-144x144.png",
     },
     {
       name: "msapplication-config",
-      content: "favicons/browserconfig.xml",
-    },
-    {
-      name: "theme-color",
-      content: palette.primary[500],
+      content: "/favicons/browserconfig.xml",
     },
     {
       name: "twitter:card",
@@ -127,7 +116,7 @@ export const meta: V2_MetaFunction = () => {
     },
     {
       name: "twitter:image",
-      content: "images/jeremy-coffee-prototyping.jpg",
+      content: "/images/jeremy-coffee-prototyping.jpg",
     },
   ];
 };
