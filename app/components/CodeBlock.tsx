@@ -2,9 +2,9 @@ import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialDark as theme } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import python from "react-syntax-highlighter/dist/cjs/languages/prism/python";
 import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
-import { useEffect } from "react";
 
-
+SyntaxHighlighter.registerLanguage('python', python);
+SyntaxHighlighter.registerLanguage('bash', bash);
 
 export default function Code({
   text = "",
@@ -12,12 +12,7 @@ export default function Code({
 }: {
   text?: string;
   language?: 'python' | 'bash';
-  }) {
-  useEffect(() => {
-      SyntaxHighlighter.registerLanguage('python', python);
-      SyntaxHighlighter.registerLanguage('bash', bash);
-  }, []);
-
+}) {
   return (
     <SyntaxHighlighter
       showLineNumbers
