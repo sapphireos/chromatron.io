@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container">
         <p>
           Copyright &copy;{" "}
-          <span className="copyright-year" suppressHydrationWarning={true}>{new Date().getFullYear() || '2023'}</span>{" "}
+          <span className="copyright-year">2023</span>{" "}
           {brand.parentCompanyLegal} {"// "}
           <Link to="/privacy">Privacy Policy</Link>
         </p>
