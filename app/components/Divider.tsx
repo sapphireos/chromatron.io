@@ -1,3 +1,3 @@
 export default function Divider() {
-  return <hr style={{ marginBottom: 30 }} />;
+  return <hr className="mb-16" />;
 }

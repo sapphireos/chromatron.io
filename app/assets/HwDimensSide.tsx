@@ -7,7 +7,6 @@ export default function HwDimensSide(props: any) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>hw-dimens-side</title>
       <g fill="none" fillRule="evenodd">
         <text
           fontFamily="rift-soft, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif"

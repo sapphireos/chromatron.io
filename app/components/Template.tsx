@@ -11,7 +11,7 @@ export default function Template({
   return (
     <>
       {header && <Header />}
-      <main style={{ minHeight: "90vh" }}>{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   );

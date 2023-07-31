@@ -38,7 +38,7 @@ const theme = {
       current: "currentColor",
       black: gray.black,
       white: gray.white,
-      gray: gray.black,
+      gray,
 
       green,
       purple,

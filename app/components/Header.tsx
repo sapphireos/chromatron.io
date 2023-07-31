@@ -3,9 +3,7 @@ import { Link } from "@remix-run/react";
 export function Header() {
   return (
     <header
-      style={{
-        paddingTop: "3rem",
-      }}
+      className="pt-16"
     >
       <div className="container">
         <h1 className="h4">

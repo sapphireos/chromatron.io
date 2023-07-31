@@ -55,30 +55,26 @@ export const TechnicalDetails = () => (
         </ul>
         <div className="row">
           <div
-            className="col-xs-12 col-sm-6"
-            style={{ paddingTop: "16px", paddingBottom: "16px" }}
+            className="col-xs-12 col-sm-6 py-10"
           >
             {/* <img
                 className="img-responsive"
                 src="images/hw-dimens-top.png"
                 alt="side dimensions"
                 loading="lazy"
-                style={{ margin: 1em 0 }}
               /> */}
-            <HwDimensTop className="img-responsive" />
+            <HwDimensTop className="img-responsive  mx-auto" />
           </div>
           <div
-            className="col-xs-12 col-sm-6"
-            style={{ paddingTop: "16px", paddingBottom: "16px" }}
+            className="col-xs-12 col-sm-6 py-10"
           >
             {/* <img
                 className="img-responsive"
                 src="images/hw-dimens-side.png"
                 alt="side dimensions"
                 loading="lazy"
-                style={{ margin: 1em 0 }}
               /> */}
-            <HwDimensSide className="img-responsive" />
+            <HwDimensSide className="img-responsive  mx-auto" />
           </div>
         </div>
       </FeatureList>

@@ -145,7 +145,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full">
+      <body className="flex flex-col h-screen justify-between">
         <Outlet />
         <ScrollRestoration />
         <Scripts />

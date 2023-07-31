@@ -17,7 +17,7 @@ export function OpenSource() {
             <img
               height={180}
               width={172}
-              className="img-responsive"
+              className="img-responsive mx-auto"
               src={osiLogoOutline}
               alt="Open Source Initiative logo"
               loading="lazy"
@@ -32,7 +32,7 @@ export function OpenSource() {
             <img
               height={180}
               width={172}
-              className="img-responsive"
+              className="img-responsive mx-auto"
               src={oshwLogoOutline}
               alt="Open Source Hardware logo"
               loading="lazy"
