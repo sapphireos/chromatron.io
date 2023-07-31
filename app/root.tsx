@@ -10,7 +10,10 @@ import {
 } from "@remix-run/react";
 import { useEffect } from "react";
 
+import stylesheet from "~/tailwind.css";
+
 export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesheet },
   {
     rel: "stylesheet",
     href: "/styles/main.css",
@@ -56,7 +59,7 @@ export default function App() {
   useEffect(() => {
     try {
       window.Typekit.load({ async: !0 });
-    } catch (a) {}
+    } catch (a) { }
   }, []);
   return (
     <html lang="en">
