@@ -60,6 +60,30 @@ export const links: LinksFunction = () => [
     as: "image",
     href: "/images/jeremy-coffee-prototyping.jpg",
   },
+  {
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preconnect",
+    href: "https://www.google.com",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preconnect",
+    href: "https://use.typekit.net",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preconnect",
+    href: "https://p.typekit.net",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://use.typekit.net/pww1pws.css",
+  },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
@@ -116,11 +140,6 @@ export const meta: V2_MetaFunction = () => {
   ];
 };
 export default function App() {
-  useEffect(() => {
-    try {
-      window.Typekit.load({ async: !0 });
-    } catch (a) { }
-  }, []);
   return (
     <html
       // webfont classes from typescript
@@ -130,7 +149,6 @@ export default function App() {
       <head>
         <Meta />
         <Links />
-        <script src="//use.typekit.net/pww1pws.js"></script>
       </head>
       <body>
         <Outlet />

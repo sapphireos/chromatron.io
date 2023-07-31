@@ -3,6 +3,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
+    "serve": "remix-serve serve ./build",
     "dev": "remix dev",
     "typecheck": "tsc",
     "sass": "sass app/styles:public/styles --style=compressed",
