@@ -2,7 +2,7 @@ import type { V2_MetaFunction } from "@remix-run/node";
 
 import { Intro } from "../sections/Intro";
 // import { Kickstarter } from "../pages/Kickstarter";
-// import { TechnicalDetails } from "../sections/TechnicalDetails";
+import { TechnicalDetails } from "../sections/TechnicalDetails";
 import { OpenSource } from "../sections/OpenSource/OpenSource";
 import { AboutUs } from "../sections/AboutUs";
 import { ApiExamples } from "../sections/ApiExamples";
@@ -27,17 +27,17 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
   return (
     <Template>
-      {/* <Hero /> */}
-      {/* <Intro /> */}
-      {/* <Features /> */}
+      <Hero />
+      <Intro />
+      <Features />
       {/* <Kickstarter /> */}
-      {/* <ApiExamples /> */}
-      {/* <CustomScripts /> */}
-      {/* <Hardware /> */}
-      {/* <KickstarterVideo /> */}
-      {/* <TechnicalDetails /> */}
-      {/* <AboutUs /> */}
-      {/* <OpenSource /> */}
+      <ApiExamples />
+      <CustomScripts />
+      <Hardware />
+      <KickstarterVideo />
+      <TechnicalDetails />
+      <AboutUs />
+      <OpenSource />
     </Template>
   );
 }
