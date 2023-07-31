@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import Divider from "~/sections/Divider";
+import Divider from "~/components/Divider";
 
 export default function FeatureList({
   title = "",

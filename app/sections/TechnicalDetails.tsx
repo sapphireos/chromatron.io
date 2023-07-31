@@ -1,11 +1,7 @@
-import type { ReactNode } from "react";
 import HwDimensSide from "~/assets/HwDimensSide";
 import HwDimensTop from "~/assets/HwDimensTop";
 import FeatureList from "~/components/FeatureList";
-
-const ListItem = ({ children }: { children: ReactNode }) => (
-  <li style={{ marginBottom: "1em" }}>{children}</li>
-);
+import ListItem from "~/components/ListItem";
 
 export const TechnicalDetails = () => (
   <section className="technical-details">
