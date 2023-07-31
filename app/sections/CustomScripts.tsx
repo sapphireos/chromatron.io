@@ -1,4 +1,4 @@
-import CodeBlock from "~/components/CodeBlock";
+import Code from "~/components/CodeBlock";
 
 export function CustomScripts() {
   return (
@@ -13,7 +13,7 @@ export function CustomScripts() {
         </p>
         <div className="row">
           <div className="col-xs-12 col-md-8 mb-10">
-            <CodeBlock
+            <Code
               language="python"
               text={`# this script generates a rolling rainbow pattern
 
@@ -44,8 +44,7 @@ def loop():
         pixels[i].hue = a
 
         # shift color for next iteration
-        a += 1.0 / pix_count()
-                `}
+        a += 1.0 / pix_count()`}
             />
           </div>
           <div className="col-xs-12 col-md-4">

@@ -138,7 +138,11 @@ export default function App() {
     } catch (a) {}
   }, []);
   return (
-    <html lang="en">
+    <html
+      // webfont classes from typescript
+      className="wf-proximanova-n7-active wf-proximanova-i7-active wf-proximanova-n4-active wf-proximanova-i4-active wf-riftsoft-i4-active wf-riftsoft-n4-active wf-riftsoft-i6-active wf-riftsoft-n7-active wf-riftsoft-i7-active wf-active"
+      lang="en"
+    >
       <head>
         <Meta />
         <Links />

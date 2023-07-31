@@ -1,4 +1,4 @@
-import CodeBlock from "~/components/CodeBlock";
+import Code from "~/components/CodeBlock";
 
 export function ApiExamples() {
   return (
@@ -12,7 +12,7 @@ export function ApiExamples() {
         <div className="row">
           <div className="col-xs-12 col-sm-6 mb-10">
             <h3>Python</h3>
-            <CodeBlock
+            <Code
               language="python"
               text={`from chromatron import *
 
@@ -23,13 +23,12 @@ group = DeviceGroup('living_room')
 group.load_vm('rainbow.fx')
 
 # Set master dimmer to 50%
-group.dimmer = 0.5
-                  `}
+group.dimmer = 0.5`}
             />
           </div>
           <div className="col-xs-12 col-sm-6 mb-10">
             <h3>Command Line</h3>
-            <CodeBlock
+            <Code
               language="shell"
               text={`# Install Python library
 pip install chromatron
