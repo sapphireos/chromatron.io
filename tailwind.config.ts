@@ -20,10 +20,10 @@ const theme = {
         base: "1rem",
         lg: "1.25rem",
         xl: "1.45rem",
-        "2xl": "1.563rem",
-        "3xl": "1.7rem",
-        "4xl": "3.43rem",
-        "5xl": "5.14rem",
+        "2xl": ["1.563rem", { lineHeight: "1.1em" }],
+        "3xl": ["1.7rem", { lineHeight: "1.1em" }],
+        "4xl": ["3.43rem", { lineHeight: "1.1em" }],
+        "5xl": ["5.14rem", { lineHeight: "1.1em" }],
       },
 
       backgroundImage: {

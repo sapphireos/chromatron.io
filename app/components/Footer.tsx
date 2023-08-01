@@ -6,13 +6,13 @@ export function Footer() {
   return (
     <footer className="main-footer primary">
       <div className="container">
-        <p>
+        <p className="mb-4">
           Copyright &copy;{" "}
           <span className="copyright-year">2023</span>{" "}
           {brand.parentCompanyLegal} {"// "}
           <Link to="/privacy">Privacy Policy</Link>
         </p>
-        <ul className="list-inline">
+        <ul className="flex flex-row space-x-4">
           {brand.social.map(({ id, href, iconClass }) => (
             <li key={`social-link${id}`}>
               <a rel="me" href={href}>

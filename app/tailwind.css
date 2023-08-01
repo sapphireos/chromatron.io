@@ -10,31 +10,67 @@
   h3,
   h4,
   h5,
-  h6 {
-    @apply font-display;
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    @apply font-display font-bold mb-[0.6em] tracking-wide;
   }
   h1,
   .h1 {
-    @apply text-2xl italic;
+    @apply text-5xl italic;
   }
   h2,
   .h2 {
-    @apply text-xl italic;
+    @apply text-4xl italic;
   }
   h3,
   .h3 {
-    @apply text-lg font-normal;
+    @apply text-3xl font-light;
   }
   h4,
   .h4 {
-    @apply text-base italic;
+    @apply text-2xl text-base italic tracking-normal;
   }
   h5,
   .h5 {
-    @apply text-sm;
+    @apply text-xl font-light;
   }
   h6,
   .h6 {
-    @apply text-xs;
+    @apply text-xl italic;
+  }
+
+  .lead {
+    @apply text-xl;
+  }
+
+  p {
+    @apply mb-6;
+  }
+
+  body {
+    @apply text-black;
+  }
+
+  body::before {
+    @apply bg-primary-500 z-50 absolute top-0 left-0 w-full h-2;
+    content: "";
+  }
+
+  header,
+  .header,
+  section,
+  .section,
+  footer,
+  .footer {
+    @apply py-[50px];
+  }
+
+  .container {
+    @apply max-w-[900px];
   }
 }
