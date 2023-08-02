@@ -71,8 +71,7 @@
   }
 
   .container {
-    max-width: 900px;
-    /* @apply max-w-[900px]; */
+    @apply max-w-[900px];
   }
 
   .primary {
