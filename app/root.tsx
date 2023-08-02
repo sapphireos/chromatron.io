@@ -16,10 +16,10 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: tailwind,
   },
-  {
-    rel: "stylesheet",
-    href: "/styles/main.css",
-  },
+  // {
+  //   rel: "stylesheet",
+  //   href: "/styles/main.css",
+  // },
   {
     rel: "stylesheet",
     href: "/styles/font-awesome-4.7.0/css/font-awesome.min.css",

@@ -3,16 +3,17 @@ import Code from "~/components/CodeBlock";
 export function ApiExamples() {
   return (
     <section className="api-examples">
-      <div className="container">
+      <div className="container px-4 tablet:px-4">
         <h1 className="h2">API Examples</h1>
         <p className="lead">
           Discover, configure, and control devices over WiFi with our Python
           library and Command Line Interface tools:
         </p>
-        <div className="row">
-          <div className="col-xs-12 col-sm-6 mb-10">
+        <div className="md:flex md:flex-row md:justify-stretch md:space-x-8">
+          <div className="md:basis-1/2 mb-10">
             <h3>Python</h3>
             <Code
+              className="h-full w-full"
               language="python"
               text={`from chromatron import *
 
@@ -26,9 +27,10 @@ group.load_vm('rainbow.fx')
 group.dimmer = 0.5`}
             />
           </div>
-          <div className="col-xs-12 col-sm-6 mb-10">
+          <div className="md:basis-1/2 mb-10">
             <h3>Command Line</h3>
             <Code
+              className="h-full w-full"
               language="bash"
               text={`# Install Python library
 pip install chromatron

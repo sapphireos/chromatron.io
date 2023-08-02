@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import Divider from "~/components/Divider";
 
 export default function FeatureList({
   title = "",
@@ -10,14 +9,11 @@ export default function FeatureList({
   children: ReactNode;
 }) {
   return (
-    <>
-      <div className="row" {...props}>
-        <div className="col-xs-12 col-sm-4 col-md-3">
-          <h3>{title}</h3>
-        </div>
-        <div className="col-xs-12 col-sm-8 col-md-7">{children}</div>
+    <div className="md:flex md:flex-row pt-10 first:pt-0" {...props}>
+      <div className="md:basis-1/3 flex-none">
+        <h3>{title}</h3>
       </div>
-      <Divider />
-    </>
+      <div className="md:basis-2/3">{children}</div>
+    </div>
   );
 }

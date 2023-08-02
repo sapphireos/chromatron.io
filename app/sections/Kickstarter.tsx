@@ -1,6 +1,6 @@
 export const Kickstarter = () => (
   <section className="goal hidden">
-    <div className="container">
+    <div className="container px-4 tablet:px-4">
       <h1 className="h2">Goal</h1>
       <p>
         This Kickstarter is to raise money to build the first production run of

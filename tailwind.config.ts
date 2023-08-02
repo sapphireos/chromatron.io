@@ -8,6 +8,15 @@ import { green, purple, red, gray } from "./app/styles/palette";
 const theme = {
   content: ["./app/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    container: {
+      center: true,
+      screens: {
+        sm: "600px",
+        md: "728px",
+        lg: "900px",
+      },
+    },
+
     // extensions
     extend: {
       fontFamily: {
@@ -28,6 +37,7 @@ const theme = {
 
       backgroundImage: {
         hero: `url('/images/jeremy-coffee-prototyping.jpg')`,
+        intro: `url('/images/photo-c-coil.jpg')`,
       },
     },
 

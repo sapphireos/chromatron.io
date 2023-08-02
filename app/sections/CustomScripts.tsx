@@ -3,7 +3,7 @@ import Code from "~/components/CodeBlock";
 export function CustomScripts() {
   return (
     <section className="custom-scripts">
-      <div className="container">
+      <div className="container px-4 tablet:px-4">
         <h1 className="h2">Live code with FX Script</h1>
         <p className="lead">
           FX Script is a hybrid language based on Python syntax running on a
@@ -11,8 +11,8 @@ export function CustomScripts() {
           graphics directly on hardware. FX can compile and load in real-time to
           get instant visual feedback.
         </p>
-        <div className="row">
-          <div className="col-xs-12 col-md-8 mb-10">
+        <div className="md:flex md:flex-row md:space-x-8">
+          <div className="md:basis-3/4 mb-10">
             <Code
               language="python"
               text={`# this script generates a rolling rainbow pattern
@@ -50,6 +50,7 @@ def loop():
           <div className="col-xs-12 col-md-4">
             <div className="embed-responsive embed-responsive-9by16">
               <iframe
+                className="w-full aspect-[9/16]"
                 title="FX Script demo"
                 src="https://www.youtube-nocookie.com/embed/bv1z3aF-_1o?rel=0&showinfo=0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

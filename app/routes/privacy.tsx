@@ -18,7 +18,7 @@ export default function Index() {
   return (
     <Template header>
       <section className="privacy-policy">
-        <div className="container">
+        <div className="container px-4 tablet:px-4">
           <h1 className="h2">Privacy Policy</h1>
           <div className="row">
             <div className="col-xs-12">

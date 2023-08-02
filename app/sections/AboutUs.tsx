@@ -1,7 +1,7 @@
 export function AboutUs() {
   return (
     <section className="about-us tertiary">
-      <div className="container">
+      <div className="container px-4 tablet:px-4">
         <h1 className="h2">About Us</h1>
         <p className="lead">
           Sapphire Open Systems is an Austin, TX based startup whose mission is

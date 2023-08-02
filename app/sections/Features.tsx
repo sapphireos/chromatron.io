@@ -3,10 +3,10 @@ import { MediaItem } from "~/components/MediaItem";
 export function Features() {
   return (
     <section className="why-use tertiary">
-      <div className="container">
+      <div className="container px-4 tablet:px-4">
         <h1 className="h2">Chromatron Features</h1>
-        <div className="row">
-          <div className="col-xs-12 col-sm-6">
+        <div className="md:flex md:space-x-4">
+          <div className="flex-1">
             <ul className="media-list">
               <MediaItem icon="lightbulb-o" title="LED Pixel Drivers">
                 <p>
@@ -36,7 +36,7 @@ export function Features() {
               </MediaItem> */}
             </ul>
           </div>
-          <div className="col-xs-12 col-sm-6">
+          <div className="flex-1">
             <ul className="media-list">
               <MediaItem icon="bolt" title="FX Scripting Engine">
                 <p>

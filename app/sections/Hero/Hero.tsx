@@ -23,7 +23,7 @@ export function Hero() {
     <section
       className={`hero inverse bg-hero bg-center bg-cover py-[100px] px-0`}
     >
-      <div className="container">
+      <div className="container px-4 tablet:px-4">
         <Logo height={80} width={54} color={palette.gray.white} />
         <h1 className="h2 mb-5">
           WiFi

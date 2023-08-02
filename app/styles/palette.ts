@@ -1,6 +1,7 @@
 export const gray = {
   white: "#fff", // white
-  100: "#eee", // gray-lighter
+  100: "#f9f9f9",
+  200: "#eee", // gray-lighter
   300: "#d8d8d8", // gray-light
   500: "#555", // gray
   700: "#333", // gray-dark
@@ -9,6 +10,7 @@ export const gray = {
 };
 
 export const green = {
+  100: "#e8f5ef",
   500: "#49ffa6",
 };
 export const purple = {

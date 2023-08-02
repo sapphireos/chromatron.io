@@ -5,7 +5,7 @@ import { brand } from "~/utils";
 export function Footer() {
   return (
     <footer className="main-footer primary">
-      <div className="container">
+      <div className="container px-4 tablet:px-4">
         <p className="mb-4">
           Copyright &copy;{" "}
           <span className="copyright-year">2023</span>{" "}

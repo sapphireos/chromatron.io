@@ -7,19 +7,19 @@ export function Hardware() {
 
   return (
     <section className="hardware tertiary">
-      <div className="container">
+      <div className="container px-4 tablet:px-4">
         <h1 className="h2">Hardware</h1>
         <p className="text-center">
           <img
             src={hwDiagramVertical}
             alt={alt}
-            className="img-responsive visible-xs my-0 mx-auto py-10 text-center"
+            className="block sm:hidden my-0 mx-auto py-10 text-center"
             loading="lazy"
           />
           <img
             src={hwDiagramHorizontal}
             alt={alt}
-            className="img-responsive hidden-xs my-0 mx-auto py-10 text-center"
+            className="hidden sm:block my-0 mx-auto py-10 text-center"
             loading="lazy"
           />
         </p>
