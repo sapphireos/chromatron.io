@@ -1,3 +1,20 @@
+export interface Brand {
+  name: string;
+  nameLegal: string;
+  url: string;
+  parentCompany: string;
+  parentCompanyLegal: string;
+  parentCompanyUrl: string;
+  email: string;
+  social: Social[];
+}
+
+interface Social {
+  id: string;
+  href: string;
+  iconClass: string;
+}
+
 export const brand = {
   name: "Chromatron",
   nameLegal: "Chromatron",
@@ -28,4 +45,4 @@ export const brand = {
       iconClass: "fa-youtube",
     },
   ],
-};
+} as Brand;

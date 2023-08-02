@@ -13,6 +13,16 @@ import { KickstarterVideo } from "../sections/KickstarterVideo";
 import { Hero } from "../sections/Hero/Hero";
 import Template from "~/components/Template";
 
+import { json } from "@remix-run/node";
+
+
+import { brand as brandData } from "~/utils";
+
+
+export const loader = async () => {
+  return json(brandData);
+};
+
 export const meta: V2_MetaFunction = () => {
   return [
     { title: "Chromatron — WiFi Pixel Controller" },
