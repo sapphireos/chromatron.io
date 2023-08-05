@@ -1,9 +1,7 @@
-import { Link, useLoaderData } from "@remix-run/react";
-import type { Brand } from '../utils'
+import { Link } from "@remix-run/react";
+import { brand } from '../utils'
 
 export function Footer() {
-  const brand: Brand = useLoaderData()
-
   return (
     <footer className="main-footer primary">
       <div className="container px-4 tablet:px-4">

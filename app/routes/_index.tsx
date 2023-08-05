@@ -1,7 +1,8 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import { type V2_MetaFunction } from "@remix-run/node";
+
+import Template from "~/components/Template";
 
 import { Intro } from "../sections/Intro";
-// import { Kickstarter } from "../pages/Kickstarter";
 import { TechnicalDetails } from "../sections/TechnicalDetails";
 import { OpenSource } from "../sections/OpenSource/OpenSource";
 import { AboutUs } from "../sections/AboutUs";
@@ -11,17 +12,6 @@ import { CustomScripts } from "../sections/CustomScripts";
 import { Hardware } from "../sections/Hardware/Hardware";
 import { KickstarterVideo } from "../sections/KickstarterVideo";
 import { Hero } from "../sections/Hero/Hero";
-import Template from "~/components/Template";
-
-import { json } from "@remix-run/node";
-
-
-import { brand as brandData } from "~/utils";
-
-
-export const loader = async () => {
-  return json(brandData);
-};
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -40,7 +30,6 @@ export default function Index() {
       <Hero />
       <Intro />
       <Features />
-      {/* <Kickstarter /> */}
       <ApiExamples />
       <CustomScripts />
       <Hardware />

@@ -1,15 +1,8 @@
-import { json, type V2_MetaFunction } from "@remix-run/node";
-import { Link, useLoaderData } from "@remix-run/react";
+import { type V2_MetaFunction } from "@remix-run/node";
+import { Link } from "@remix-run/react";
 
 import Template from "~/components/Template";
-import type { Brand } from "~/utils";
-
-import { brand as brandData } from "~/utils";
-
-export const loader = async () => {
-  return json(brandData);
-};
-
+import { brand } from "~/utils";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -22,8 +15,6 @@ export const meta: V2_MetaFunction = () => {
 };
 
 export default function Index() {
-  const brand: Brand = useLoaderData()
-
   return (
     <Template header>
       <section className="privacy-policy">

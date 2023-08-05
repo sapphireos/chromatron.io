@@ -15,7 +15,7 @@ interface Social {
   iconClass: string;
 }
 
-export const brand = {
+export const brand: Brand = {
   name: "Chromatron",
   nameLegal: "Chromatron",
   url: "https://chromatron.io",
@@ -45,4 +45,4 @@ export const brand = {
       iconClass: "fa-youtube",
     },
   ],
-} as Brand;
+};
