@@ -2,7 +2,6 @@
 module.exports = {
   tailwind: true,
   ignoredRouteFiles: ["**/.*"],
-  serverModuleFormat: "cjs", // enforce for vercel support
   future: {
     v2_dev: true,
     v2_errorBoundary: true,
