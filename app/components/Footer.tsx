@@ -1,4 +1,5 @@
 import { Link, useRouteLoaderData } from "@remix-run/react";
+import { type Brand } from "~/utils";
 
 const SocialBug = ({ id = '', href = '#', iconClass = 'fa-star' }) => (
   <li key={`social-link${id}`}>
@@ -9,13 +10,13 @@ const SocialBug = ({ id = '', href = '#', iconClass = 'fa-star' }) => (
 )
 
 export function Footer() {
-  const { brand } = useRouteLoaderData('root');
+  const brand = useRouteLoaderData<Brand>('root');
 
   return (
     <footer className="main-footer primary">
       <div className="container px-4 tablet:px-4">
         <p className="mb-4">
-          Copyright &copy;{" "}
+          Copyright {" "}
           <span className="copyright-year">2023</span>{" "}
           {brand?.parentCompanyLegal} {"// "}
           <Link to="/privacy">Privacy Policy</Link>
