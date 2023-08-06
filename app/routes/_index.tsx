@@ -10,7 +10,7 @@ import { AboutUs } from "../sections/AboutUs";
 import { Features } from "../sections/Features";
 // import { CustomScripts } from "../sections/CustomScripts";
 import { Hardware } from "../sections/Hardware/Hardware";
-import { KickstarterVideo } from "../sections/KickstarterVideo";
+// import { KickstarterVideo } from "../sections/KickstarterVideo";
 import { Hero } from "../sections/Hero/Hero";
 
 export const meta: V2_MetaFunction = () => {
@@ -33,7 +33,7 @@ export default function Index() {
       {/* <ApiExamples /> */}
       {/* <CustomScripts /> */}
       <Hardware />
-      <KickstarterVideo />
+      {/* <KickstarterVideo /> */}
       <TechnicalDetails />
       <AboutUs />
       <OpenSource />
