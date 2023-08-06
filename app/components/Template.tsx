@@ -1,5 +1,5 @@
-import { Footer } from "./Footer";
-import { Header } from "./Header";
+// import { Footer } from "./Footer";
+// import { Header } from "./Header";
 
 export default function Template({
   header = false,
@@ -10,9 +10,9 @@ export default function Template({
 }) {
   return (
     <>
-      {header && <Header />}
+      {/* {header && <Header />} */}
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
