@@ -16,7 +16,7 @@ export function Footer() {
             {brand.social.map(({ id, href, iconClass }) => (
               <li key={`social-link${id}`}>
                 <a rel="me" href={href} className="text-black">
-                  <i className={`fa ${iconClass} fa-2x`} />
+                  <span className={`fa ${iconClass} fa-2x`} />
                 </a>
               </li>
             ))}
