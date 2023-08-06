@@ -23,7 +23,7 @@ export function Features() {
                   computations.
                 </p>
               </MediaItem>
-              <MediaItem icon="wifi" title="Control &amp; program over WiFi">
+              <MediaItem icon="wifi" title="Control & program over WiFi">
                 <p>
                   Easily control and coordinate multiple devices wirelessly.
                 </p>
@@ -44,7 +44,7 @@ export function Features() {
                   specifically for pixel graphics.
                 </p>
               </MediaItem>
-              <MediaItem icon="terminal" title="Python &amp; Command Line APIs">
+              <MediaItem icon="terminal" title="Python & Command Line APIs">
                 <p>
                   The Python library and CLI make it easy to integrate
                   Chromatron into other projects.
