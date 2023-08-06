@@ -10,7 +10,7 @@ const SocialBug = ({ id = '', href = '#', iconClass = 'fa-star' }) => (
 )
 
 export function Footer() {
-  const brand = useRouteLoaderData<Brand>('root');
+  const { brand } = useRouteLoaderData('root') as { brand: Brand };
 
   return (
     <footer className="main-footer primary">
