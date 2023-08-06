@@ -10,10 +10,10 @@ export default function FeatureList({
 }) {
   return (
     <div className="md:flex md:flex-row pt-10 first:pt-0" {...props}>
-      <div className="md:basis-1/3 flex-none">
+      <div className="md:basis-1/4 flex-none">
         <h3>{title}</h3>
       </div>
-      <div className="md:basis-2/3">{children}</div>
+      <div className="md:basis-3/4">{children}</div>
     </div>
   );
 }

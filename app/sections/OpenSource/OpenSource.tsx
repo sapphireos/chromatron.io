@@ -5,7 +5,7 @@ export function OpenSource() {
   return (
     <section className="open-source secondary">
       <div className="container px-4 md:px-4">
-        <div className="flex flex-col md:flex-row md:space-x-4 justify-between items-center">
+        <div className="flex flex-col md:flex-row md:space-x-8 justify-between items-center">
           <div className="md:basis-3/4">
             <h1 className="h2">100% Open Source</h1>
             <p className="lead">
@@ -14,7 +14,7 @@ export function OpenSource() {
             </p>
           </div>
           <div className="flex space-x-4 justify-between items-center">
-            <div className="basis-1/2 text-center">
+            <div className="basis-1/2 text-center space-y-4">
               <img
                 height={180}
                 width={172}
@@ -23,13 +23,13 @@ export function OpenSource() {
                 alt="Open Source Initiative logo"
                 loading="lazy"
               />
-              <h4>
+              <h4 className="tracking-wide text-lg">
                 Open Source
                 <br />
                 Initiative
               </h4>
             </div>
-            <div className="basis-1/2 text-center">
+            <div className="basis-1/2 text-center space-y-4">
               <img
                 height={180}
                 width={172}
@@ -38,7 +38,7 @@ export function OpenSource() {
                 alt="Open Source Hardware logo"
                 loading="lazy"
               />
-              <h4>
+              <h4 className="tracking-wide text-lg">
                 Open Source
                 <br />
                 Hardware
