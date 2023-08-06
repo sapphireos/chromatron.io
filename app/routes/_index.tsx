@@ -15,7 +15,7 @@ import { Hero } from "../sections/Hero/Hero";
 
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: "Chromatron — WiFi Pixel Controller" },
+    { title: "Chromatron -- WiFi Pixel Controller" },
     {
       name: "description",
       content:
