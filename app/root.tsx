@@ -8,8 +8,14 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { json } from "@remix-run/node";
 
+import { brand } from './utils'
 import tailwind from "./tailwind.css";
+
+export async function loader() {
+  return json({ brand });
+}
 
 export const links: LinksFunction = () => [
   {
