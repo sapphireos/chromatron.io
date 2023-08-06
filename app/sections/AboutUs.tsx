@@ -7,7 +7,7 @@ export function AboutUs() {
           Sapphire Open Systems is an Austin, TX based startup whose mission is
           to enable hobbyists, makers, and professionals to connect anything to
           everything and promote open source as a better way to
-          make&nbsp;electronics.
+          make electronics.
         </p>
       </div>
     </section>

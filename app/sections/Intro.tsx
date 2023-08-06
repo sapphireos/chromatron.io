@@ -20,7 +20,7 @@ export const Intro = () => (
         <h1 className="h2">LED Project Enabler</h1>
         <p className="lead">
           Chromatron is an open source pixel controller designed to make LED
-          pixel projects easy and&nbsp;fun.
+          pixel projects easy and fun.
         </p>
       </div>
 

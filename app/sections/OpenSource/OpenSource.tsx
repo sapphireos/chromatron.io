@@ -10,7 +10,7 @@ export function OpenSource() {
             <h1 className="h2">100% Open Source</h1>
             <p className="lead">
               All software and hardware will be released under OSI compatible
-              licenses once the project hits the funding&nbsp;goal.
+              licenses once the project hits the funding goal.
             </p>
           </div>
           <div className="flex space-x-4 justify-between items-center">

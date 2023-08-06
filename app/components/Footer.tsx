@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="main-footer primary">
       <div className="container px-4 tablet:px-4">
         <p className="mb-4">
-          Copyright &copy;{" "}
+          Copyright ©{" "}
           <span className="copyright-year">2023</span>{" "}
           {brand.parentCompanyLegal} {"// "}
           <Link to="/privacy">Privacy Policy</Link>
