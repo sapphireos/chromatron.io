@@ -1,5 +1,5 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, V2_MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -8,13 +8,24 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { useEffect } from "react";
+import { json } from "@remix-run/node";
+
+import { brand } from './utils'
+import tailwind from "./tailwind.css";
+
+export async function loader() {
+  return json({ brand });
+}
 
 export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
-    href: "/styles/main.css",
+    href: tailwind,
   },
+  // {
+  //   rel: "stylesheet",
+  //   href: "/styles/main.css",
+  // },
   {
     rel: "stylesheet",
     href: "/styles/font-awesome-4.7.0/css/font-awesome.min.css",
@@ -49,53 +60,101 @@ export const links: LinksFunction = () => [
     rel: "shortcut icon",
     href: "/favicons/favicon.ico",
   },
+  {
+    rel: "preload",
+    as: "image",
+    href: "/images/jeremy-coffee-prototyping.jpg",
+  },
+  {
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preconnect",
+    href: "https://www.google.com",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preconnect",
+    href: "https://use.typekit.net",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preconnect",
+    href: "https://p.typekit.net",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://use.typekit.net/pww1pws.css",
+  },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
+export const meta: V2_MetaFunction = () => {
+  return [
+    {
+      property: "og:url",
+      content: "https://chromatron.io/",
+    },
+    {
+      property: "og:title",
+      content: "WiFi Pixel Control with Chromatron",
+    },
+    {
+      property: "og:description",
+      content:
+        "Chromatron is an open source pixel controller designed to make LED pixel projects easy and fun.",
+    },
+    {
+      property: "og:image",
+      content: "/images/jeremy-coffee-prototyping.jpg",
+    },
+    {
+      name: "msapplication-TileImage",
+      content: "/favicons/mstile-144x144.png",
+    },
+    {
+      name: "msapplication-config",
+      content: "/favicons/browserconfig.xml",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:site",
+      content: "@sapphireos",
+    },
+    {
+      name: "twitter:title",
+      content: "WiFi Pixel Control with Chromatron",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Chromatron is an open source pixel controller designed to make LED pixel projects easy and fun.",
+    },
+    {
+      name: "twitter:image",
+      content: "/images/jeremy-coffee-prototyping.jpg",
+    },
+  ];
+};
 export default function App() {
-  useEffect(() => {
-    try {
-      window.Typekit.load({ async: !0 });
-    } catch (a) {}
-  }, []);
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-        <meta property="og:url" content="http://chromatron.io/" />
         <meta
-          property="og:title"
-          content="WiFi Pixel Control with Chromatron"
+          name="viewport"
+          content="width=device-width,initial-scale=1"
         />
-        <meta
-          property="og:description"
-          content="Chromatron is an open source pixel controller designed to make LED pixel projects easy and fun."
-        />
-        <meta
-          property="og:image"
-          content="images/jeremy-coffee-prototyping.jpg"
-        />
-        <meta name="msapplication-TileColor" content="#49ffa6" />
-        <meta
-          name="msapplication-TileImage"
-          content="favicons/mstile-144x144.png"
-        />
-        <meta
-          name="msapplication-config"
-          content="favicons/browserconfig.xml"
-        />
-        <meta name="theme-color" content="#ffffff" />
         <Meta />
         <Links />
-
-        {/* legacy chromatron.io v1 scripts */}
-        {/* <script src="https://use.fontawesome.com/dee7484932.js"></script> */}
-        {/* <script src="scripts/vendor/modernizr.js"></script> */}
-        <script src="https://use.typekit.net/pww1pws.js"></script>
       </head>
-      <body>
+      <body className="flex flex-col h-screen justify-between">
         <Outlet />
         <ScrollRestoration />
         <Scripts />

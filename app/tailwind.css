@@ -1,0 +1,99 @@
+@tailwind base; /* Preflight will be injected here */
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    @apply font-display font-bold mb-[0.6em] tracking-wide;
+  }
+  h1,
+  .h1 {
+    @apply text-5xl italic;
+  }
+  h2,
+  .h2 {
+    @apply text-4xl italic;
+  }
+  h3,
+  .h3 {
+    @apply text-3xl font-light;
+  }
+  h4,
+  .h4 {
+    @apply text-2xl text-base italic tracking-normal;
+  }
+  h5,
+  .h5 {
+    @apply text-xl font-light;
+  }
+  h6,
+  .h6 {
+    @apply text-xl italic;
+  }
+
+  .lead {
+    @apply text-xl;
+  }
+
+  p {
+    @apply mb-6;
+  }
+
+  body {
+    @apply text-black;
+  }
+
+  a {
+    @apply text-secondary-500;
+  }
+  a:hover {
+    @apply text-secondary-900 underline;
+  }
+
+  body::before {
+    @apply bg-primary-500 z-50 absolute top-0 left-0 w-full h-2;
+    content: "";
+  }
+
+  header,
+  .header,
+  section,
+  .section,
+  footer,
+  .footer {
+    @apply py-[50px];
+  }
+
+  .container {
+    @apply max-w-[900px];
+  }
+
+  .primary {
+    @apply bg-primary-500;
+  }
+
+  .secondary {
+    @apply bg-primary-100;
+  }
+
+  .tertiary {
+    @apply bg-gray-100;
+  }
+
+  .inverse {
+    @apply text-white;
+  }
+}

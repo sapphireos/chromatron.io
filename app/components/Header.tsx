@@ -3,14 +3,12 @@ import { Link } from "@remix-run/react";
 export function Header() {
   return (
     <header
-      style={{
-        paddingTop: "3rem",
-      }}
+      className="pt-16"
     >
-      <div className="container">
+      <div className="container px-4 tablet:px-4">
         <h1 className="h4">
           <Link to="/">
-            <i className="fa fa-long-arrow-left"></i> Back to Chromatron
+            <span className="fa fa-long-arrow-left" /> Back to Chromatron
           </Link>
         </h1>
       </div>

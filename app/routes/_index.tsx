@@ -1,21 +1,21 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import { type V2_MetaFunction } from "@remix-run/node";
 
-import { Intro } from "../pages/Intro";
-// import { Kickstarter } from "../pages/Kickstarter";
-import { TechnicalDetails } from "../pages/TechnicalDetails";
-import { OpenSource } from "../pages/OpenSource";
-import { AboutUs } from "../pages/AboutUs";
-import { ApiExamples } from "../pages/ApiExamples";
-import { Features } from "../pages/Features";
-import { CustomScripts } from "../pages/CustomScripts";
-import { Hardware } from "../pages/Hardware";
-import { KickstarterVideo } from "../pages/KickstarterVideo";
-import { Hero } from "../pages/Hero";
 import Template from "~/components/Template";
+
+import { Intro } from "../sections/Intro";
+import { TechnicalDetails } from "../sections/TechnicalDetails";
+import { OpenSource } from "../sections/OpenSource/OpenSource";
+import { AboutUs } from "../sections/AboutUs";
+import { ApiExamples } from "../sections/ApiExamples";
+import { Features } from "../sections/Features";
+import { CustomScripts } from "../sections/CustomScripts";
+import { Hardware } from "../sections/Hardware/Hardware";
+import { KickstarterVideo } from "../sections/KickstarterVideo";
+import { Hero } from "../sections/Hero/Hero";
 
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: "Chromatron — WiFi Pixel Controller" },
+    { title: "Chromatron -- WiFi Pixel Controller" },
     {
       name: "description",
       content:
@@ -30,7 +30,6 @@ export default function Index() {
       <Hero />
       <Intro />
       <Features />
-      {/* <Kickstarter /> */}
       <ApiExamples />
       <CustomScripts />
       <Hardware />

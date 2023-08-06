@@ -1,25 +1,30 @@
-import { CopyBlock, dracula as theme } from "react-code-blocks";
+import cx from 'classnames';
+import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import { materialDark as theme } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import python from "react-syntax-highlighter/dist/cjs/languages/prism/python";
+import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
 
-export default function CodeBlock({
+SyntaxHighlighter.registerLanguage('python', python);
+SyntaxHighlighter.registerLanguage('bash', bash);
+
+export default function Code({
+  className = '',
   text = "",
   language = "python",
-  wrapLongLines = true,
-  onCopy = () => {},
-  ...props
+}: {
+  className?: string;
+  text?: string;
+  language?: 'python' | 'bash';
 }) {
   return (
-    <CopyBlock
-      text={text}
-      language={language}
-      // defaults
-      theme={{ mode: "dark", ...theme }}
+    <SyntaxHighlighter
+      className={cx(className, '!mt-0')}
       showLineNumbers
-      wrapLongLines={wrapLongLines}
-      codeBlock={false}
-      copied={false}
-      onCopy={onCopy}
-      // allow overrides
-      {...props}
-    />
+      wrapLongLines
+      language={language}
+      style={theme}
+    >
+      {text}
+    </SyntaxHighlighter>
   );
 }

@@ -7,7 +7,6 @@ export default function HwDimensTop(props: any) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>hw-dimens-top</title>
       <g fill="none" fillRule="evenodd">
         <path stroke="#C4C4C4" d="M.5 47.5h188v117.363H.5z" />
         <path stroke="#C4C4C4" d="M9.5 57.5h169.664v97.868H9.5z" />

@@ -1,4 +1,21 @@
-export const brand = {
+export interface Brand {
+  name: string;
+  nameLegal: string;
+  url: string;
+  parentCompany: string;
+  parentCompanyLegal: string;
+  parentCompanyUrl: string;
+  email: string;
+  social: Social[];
+}
+
+interface Social {
+  id: string;
+  href: string;
+  iconClass: string;
+}
+
+export const brand: Brand = {
   name: "Chromatron",
   nameLegal: "Chromatron",
   url: "https://chromatron.io",

@@ -1,26 +1,33 @@
-import { Link } from "@remix-run/react";
+import { Link, useRouteLoaderData } from "@remix-run/react";
+import { type Brand } from "~/utils";
 
-import { brand } from "~/utils";
+const SocialBug = ({ id = '', href = '#', iconClass = 'fa-star' }) => (
+  <li key={`social-link${id}`}>
+    <a rel="me" href={href} className="text-black">
+      <span className={`fa ${iconClass} fa-2x`} />
+    </a>
+  </li>
+)
 
 export function Footer() {
+  const { brand } = useRouteLoaderData('root') as { brand: Brand };
+
   return (
     <footer className="main-footer primary">
-      <div className="container">
-        <p>
-          Copyright &copy;{" "}
-          <span className="copyright-year">{new Date().getFullYear()}</span>{" "}
-          {brand.parentCompanyLegal} {"// "}
+      <div className="container px-4 tablet:px-4">
+        <p className="mb-4">
+          Copyright {'\u00A9'}{" "}
+          <span className="copyright-year">2023</span>{" "}
+          {brand?.parentCompanyLegal} {"// "}
           <Link to="/privacy">Privacy Policy</Link>
         </p>
-        <ul className="list-inline">
-          {brand.social.map(({ id, href, iconClass }) => (
-            <li key={`social-link${id}`}>
-              <a rel="me" href={href}>
-                <i className={`fa ${iconClass} fa-2x`} />
-              </a>
-            </li>
-          ))}
-        </ul>
+        {brand?.social && Array.isArray(brand.social) && (
+          <ul className="flex flex-row space-x-4">
+            {brand.social.map(({ id, href, iconClass }) => (
+              <SocialBug key={`social-bug-${id}`} id={id} href={href} iconClass={iconClass} />
+            ))}
+          </ul>
+        )}
       </div>
     </footer>
   );

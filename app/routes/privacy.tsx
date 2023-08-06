@@ -1,4 +1,4 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import { type V2_MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 
 import Template from "~/components/Template";
@@ -18,7 +18,7 @@ export default function Index() {
   return (
     <Template header>
       <section className="privacy-policy">
-        <div className="container">
+        <div className="container px-4 tablet:px-4">
           <h1 className="h2">Privacy Policy</h1>
           <div className="row">
             <div className="col-xs-12">
