@@ -1,4 +1,4 @@
-// import { Footer } from "./Footer";
+import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 export default function Template({
@@ -12,7 +12,7 @@ export default function Template({
     <>
       {header && <Header />}
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
