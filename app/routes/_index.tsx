@@ -1,4 +1,4 @@
-import { type V2_MetaFunction } from "@remix-run/node";
+import { type MetaFunction } from "@remix-run/node";
 
 import Template from "~/components/Template";
 
@@ -13,7 +13,7 @@ import { Hardware } from "../sections/Hardware/Hardware";
 import { KickstarterVideo } from "../sections/KickstarterVideo";
 import { Hero } from "../sections/Hero/Hero";
 
-export const meta: V2_MetaFunction = () => {
+export const meta: MetaFunction = () => {
   return [
     { title: "Chromatron -- WiFi Pixel Controller" },
     {
