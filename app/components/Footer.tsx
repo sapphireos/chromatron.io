@@ -17,7 +17,7 @@ export function Footer() {
       <div className="container px-4 tablet:px-4">
         <p className="mb-4">
           Copyright {'\u00A9'}{" "}
-          <span className="copyright-year">{new Date().getFullYear() || "2025"}</span>{" "}
+          <span className="copyright-year">{new Date().getFullYear()}</span>{" "}
           {brand?.parentCompanyLegal} {"// "}
           <Link to="/privacy">Privacy Policy</Link>
         </p>
